@@ -33,19 +33,19 @@ public:
     bool sensors_working();
 
     // serialPrint() prints data from component of the sensor to the Serial in JSON format
-    void serialPrint(unsigned int sensor, int component);
+    void serial_print(unsigned int sensor, int component);
 
     // getSensorTotal() returns the number of sensors in the subsystem
     int get_sensor_total();
 
     // getX() returns the x value of the component from the particular system
-    float getX(unsigned int system, int component);
+    float get_x(unsigned int system, int component);
 
     // getY() returns the y value of the component from the particular system
-    float getY(unsigned int system, int component);
+    float get_y(unsigned int system, int component);
 
     // getZ() returns the z value of the component from the particular system
-    float getZ(unsigned int system, int component);
+    float get_z(unsigned int system, int component);
 };
 
 #endif

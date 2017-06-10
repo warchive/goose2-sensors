@@ -30,7 +30,7 @@ bool IMU::sensors_working() {
     return true;
 }
 
-void IMU::serialPrint(unsigned int sensor, int component) {
+void IMU::serial_print(unsigned int sensor, int component) {
     float comp_data[3];
 
     if (sensors.at(sensor)->read(component)) {
@@ -56,21 +56,21 @@ int IMU::get_sensor_total() {
     return sensor_total;
 }
 
-float IMU::getX(unsigned int sensor, int component) {
+float IMU::get_x(unsigned int sensor, int component) {
     if (sensors.at(sensor)->read(component)) {
         return sensors.at(sensor)->getX(component);
     } else
         return stop_value;
 }
 
-float IMU::getY(unsigned int sensor, int component) {
+float IMU::get_y(unsigned int sensor, int component) {
     if (sensors.at(sensor)->read(component)) {
         return sensors.at(sensor)->getY(component);
     } else
         return stop_value;
 }
 
-float IMU::getZ(unsigned int sensor, int component) {
+float IMU::get_z(unsigned int sensor, int component) {
     if (sensors.at(sensor)->read(component)) {
         return sensors.at(sensor)->getZ(component);
     } else

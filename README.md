@@ -13,6 +13,6 @@ to sensor data, work in this repository.
 
 ## IMU Sensor
 This library contains code to control Adafruit IMUs to reliably determine pod position. For further
-documentation read [`IMU`]("https://github.com/teamwaterloop/sensors/tree/master/src/imu/IMU_README.md") readme file.
+documentation read [`IMU`](https://github.com/teamwaterloop/sensors/tree/master/src/imu/IMU_README.md) readme file.
 
 ## Scripts

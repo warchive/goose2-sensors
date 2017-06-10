@@ -22,5 +22,5 @@ void setup() {
 
 void loop() {
     delay(500);
-    im.serialPrint(0, GYRO);
+    im.serial_print(0, GYRO);
 }

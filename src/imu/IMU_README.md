@@ -145,4 +145,4 @@ getY(MAG);        // MAG Y Value
 getZ(GYRO);       // GYRO Z Value
 getZ(ACCEL);      // ACCEL Z Value
 getZ(MAG);        // MAG Z Value
-``'
+```

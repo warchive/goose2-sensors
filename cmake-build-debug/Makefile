@@ -226,33 +226,6 @@ sensors/fast:
 	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/build
 .PHONY : sensors/fast
 
-src/Main.obj: src/Main.cpp.obj
-
-.PHONY : src/Main.obj
-
-# target to build an object file
-src/Main.cpp.obj:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Main.cpp.obj
-.PHONY : src/Main.cpp.obj
-
-src/Main.i: src/Main.cpp.i
-
-.PHONY : src/Main.i
-
-# target to preprocess a source file
-src/Main.cpp.i:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Main.cpp.i
-.PHONY : src/Main.cpp.i
-
-src/Main.s: src/Main.cpp.s
-
-.PHONY : src/Main.s
-
-# target to generate assembly for a file
-src/Main.cpp.s:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Main.cpp.s
-.PHONY : src/Main.cpp.s
-
 src/imu/IMU.obj: src/imu/IMU.cpp.obj
 
 .PHONY : src/imu/IMU.obj
@@ -486,9 +459,6 @@ help:
 	@echo ... sensors
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... src/Main.obj
-	@echo ... src/Main.i
-	@echo ... src/Main.s
 	@echo ... src/imu/IMU.obj
 	@echo ... src/imu/IMU.i
 	@echo ... src/imu/IMU.s

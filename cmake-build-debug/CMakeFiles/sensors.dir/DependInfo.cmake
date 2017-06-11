@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/git/waterloop_projects/sensors/src/Main.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/Main.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/imu/IMU.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/imu/IMUSensor.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/IMUSensor.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUAccel.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/imu_components/IMUAccel.cpp.obj"
@@ -30,12 +29,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/mega"
-  "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"
+  "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"
   "../lib/SparkFunLSM9DS1/src"
   "../lib/StandardCplusplus"
   "../lib/ArduinoJson/src"
   "../src"
+  "../lib/Adafruit_LSM9DS1"
+  "../lib/Adafruit_Sensor"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Servo/src"

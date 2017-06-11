@@ -9,14 +9,13 @@
 #ifndef SRC_IMUSUBSYSTEM_H_
 #define SRC_IMUSUBSYSTEM_H_
 
-#include "StandardCplusplus.h"
-#include <vector>
 #include "IMUSensor.h"
 #include "shared/DataHandler.h"
 
 class IMU {
     private:
-        std::vector<IMUSensor*> sensors;
+        IMUSensor **sensors;
+
         const unsigned int sensor_total;
 
         // default values for x, y and z when sensor component stops working

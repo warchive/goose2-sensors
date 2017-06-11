@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sensors.dir/src/Main.cpp.obj"
   "CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj"
   "CMakeFiles/sensors.dir/src/imu/IMUSensor.cpp.obj"
   "CMakeFiles/sensors.dir/src/imu/imu_components/IMUAccel.cpp.obj"

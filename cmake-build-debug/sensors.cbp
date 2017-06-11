@@ -112,12 +112,14 @@
 					<Add option="-D__AVR_ATmega2560__"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/mega"/>
-					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
+					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/SparkFunLSM9DS1/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/StandardCplusplus"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/ArduinoJson/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/src"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/Adafruit_LSM9DS1"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/Adafruit_Sensor"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Servo/src"/>
@@ -178,12 +180,14 @@
 					<Add option="-D__AVR_ATmega2560__"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/mega"/>
-					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
+					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/SparkFunLSM9DS1/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/StandardCplusplus"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/ArduinoJson/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/src"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/Adafruit_LSM9DS1"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/Adafruit_Sensor"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Servo/src"/>
@@ -250,9 +254,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/git/waterloop_projects/sensors/src/Main.cpp">
-			<Option target="sensors"/>
-		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/IMU.cpp">
 			<Option target="sensors"/>
 		</Unit>

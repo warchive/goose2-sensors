@@ -415,6 +415,33 @@ src/imu/imu_components/IMUMag.cpp.s:
 	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/imu_components/IMUMag.cpp.s
 .PHONY : src/imu/imu_components/IMUMag.cpp.s
 
+src/imu/main.obj: src/imu/main.cpp.obj
+
+.PHONY : src/imu/main.obj
+
+# target to build an object file
+src/imu/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/main.cpp.obj
+.PHONY : src/imu/main.cpp.obj
+
+src/imu/main.i: src/imu/main.cpp.i
+
+.PHONY : src/imu/main.i
+
+# target to preprocess a source file
+src/imu/main.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/main.cpp.i
+.PHONY : src/imu/main.cpp.i
+
+src/imu/main.s: src/imu/main.cpp.s
+
+.PHONY : src/imu/main.s
+
+# target to generate assembly for a file
+src/imu/main.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/main.cpp.s
+.PHONY : src/imu/main.cpp.s
+
 src/shared/DataHandler.obj: src/shared/DataHandler.cpp.obj
 
 .PHONY : src/shared/DataHandler.obj
@@ -480,6 +507,9 @@ help:
 	@echo ... src/imu/imu_components/IMUMag.obj
 	@echo ... src/imu/imu_components/IMUMag.i
 	@echo ... src/imu/imu_components/IMUMag.s
+	@echo ... src/imu/main.obj
+	@echo ... src/imu/main.i
+	@echo ... src/imu/main.s
 	@echo ... src/shared/DataHandler.obj
 	@echo ... src/shared/DataHandler.i
 	@echo ... src/shared/DataHandler.s

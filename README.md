@@ -4,6 +4,7 @@
 
 - [About](#about)
 - [How to Contribute](#how-to-contribute)
+- [How to Code in Clion](#how-to-code-in-clion)
 - [IMU Sensor](#imu-sensor)
 - [Scripts](#scripts)
 
@@ -21,6 +22,21 @@ merge it to the main branch. When working on a new sensor, do following:
 * Create a README file for your particular sensor and document as well as you can.
 * At the end add a brief description about your sensor into the main README file in the repo. If you need help with
   how to do this, look at how IMU sensor is done.
+* For testing you can create your main.cpp file but make sure there are not multiple main files. In order to avoid this,
+  add your main file to `.gitignore`. This way everyone can have their separate main files.
+
+## How to Code in Clion
+This project is created in Clion using a library called `platformio`. In order for you to use this, follow the following steps:
+* Install Clion. You can get one for free using student account.
+* Install Platformio based on your machine. Click on [`install`](http://docs.platformio.org/en/latest/installation.html)
+  and follow the instructions.
+* Go to the project folder and using system terminal type `platformio init --ide clion --board megaatmega2560`. This `board` option
+  can be different based on what board you are using. Click on [`available boards`](http://docs.platformio.org/en/latest/platforms/atmelavr.html)
+  to learn more.
+* Every time you add a library or copy paste some files or change the structure, you have to follow the above
+  step.
+* For further help regarding this let Deep Dhillon know.
+  
 
 ## IMU Sensor
 This library contains code to control Adafruit IMUs to reliably determine pod position. For further

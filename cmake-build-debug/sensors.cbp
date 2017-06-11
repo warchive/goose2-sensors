@@ -113,10 +113,10 @@
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/mega"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
-					<Add directory="D:/git/waterloop_projects/sensors/lib/StandardCplusplus"/>
-					<Add directory="D:/git/waterloop_projects/sensors/lib/ArduinoJson/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/SparkFunLSM9DS1/src"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/StandardCplusplus"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/ArduinoJson/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"/>
@@ -179,10 +179,10 @@
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/mega"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
-					<Add directory="D:/git/waterloop_projects/sensors/lib/StandardCplusplus"/>
-					<Add directory="D:/git/waterloop_projects/sensors/lib/ArduinoJson/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/SparkFunLSM9DS1/src"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/StandardCplusplus"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/ArduinoJson/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"/>
@@ -265,6 +265,9 @@
 		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/IMUSensor.h">
 			<Option target="sensors"/>
 		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/IMU_README.md">
+			<Option target="sensors"/>
+		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUAccel.cpp">
 			<Option target="sensors"/>
 		</Unit>
@@ -287,6 +290,9 @@
 			<Option target="sensors"/>
 		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUMag.h">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/main.cpp">
 			<Option target="sensors"/>
 		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/scripts/NLR.py">

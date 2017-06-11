@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sensors.dir/src/imu/imu_components/IMUComponent.cpp.obj"
   "CMakeFiles/sensors.dir/src/imu/imu_components/IMUGyro.cpp.obj"
   "CMakeFiles/sensors.dir/src/imu/imu_components/IMUMag.cpp.obj"
+  "CMakeFiles/sensors.dir/src/imu/main.cpp.obj"
   "CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj"
   "sensors.pdb"
   "sensors.exe"

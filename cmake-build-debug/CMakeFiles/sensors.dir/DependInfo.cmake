@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUComponent.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/imu_components/IMUComponent.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUGyro.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/imu_components/IMUGyro.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUMag.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/imu_components/IMUMag.cpp.obj"
+  "D:/git/waterloop_projects/sensors/src/imu/main.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/main.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/shared/DataHandler.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -30,10 +31,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/mega"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"
-  "../lib/StandardCplusplus"
-  "../lib/ArduinoJson/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"
   "../lib/SparkFunLSM9DS1/src"
+  "../lib/StandardCplusplus"
+  "../lib/ArduinoJson/src"
   "../src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"

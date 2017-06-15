@@ -44,3 +44,10 @@ This library contains code to control Adafruit IMUs to reliably determine pod po
 documentation read [`IMU`](https://github.com/teamwaterloop/sensors/tree/master/src/imu/IMU_README.md) readme file.
 
 ## Scripts
+This library contains scripts for data processing and functional estimation. It is intended as a generic mathematical toolkit that can be used for various sensor data types. The current files include:
+* halbach_model.py - Theoretical models for the halbach wheel
+* RF.py - random forest regression model for functional estimation of sample errors
+* SVR.py - support vector regression model with radial basis function kernel to fit a smooth curve over raw data
+* SVR_demo.py - a graphical demo of the process using randomly generated data
+* test.py - a useful tool to generate mock data sets (current PRNG model is U(a,b) but can be changed to fit project needs)
+* FakeData.csv - randomly generated test set containing 1000 lines of time-x-y-z data points.

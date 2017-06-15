@@ -50,4 +50,7 @@ This library contains scripts for data processing and functional estimation. It 
 * SVR.py - support vector regression model with radial basis function kernel to fit a smooth curve over raw data
 * SVR_demo.py - a graphical demo of the process using randomly generated data
 * test.py - a useful tool to generate mock data sets (current PRNG model is U(a,b) but can be changed to fit project needs)
-* FakeData.csv - randomly generated test set containing 1000 lines of time-x-y-z data points.
+* FakeData.csv - randomly generated test set containing 1000 lines of time-x-y-z data points.<br/>
+
+Invoke the scripts from the node server in the following order:
+SVR.py -> halbach_model.py -> RF.py (this will perform preliminary curve smoothing, theoretical value calculations, and regression on the error range)

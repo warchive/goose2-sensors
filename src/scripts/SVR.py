@@ -39,7 +39,7 @@ def SVR_process_monotype(JSONArray):
     returnJSONArray = []
     count = 0
     while count < size:
-        returnJSONArray.append({"time": t[count], "sensor": DataType, "data": [x_rbf[count], y_rbf[count], z_rbf[count]]})
+        returnJSONArray.append({"time": t[count][0], "sensor": DataType, "data": [x_rbf[count], y_rbf[count], z_rbf[count]]})
         count += 1
 
     # red for x, blue for y and green for z

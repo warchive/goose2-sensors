@@ -1,6 +1,9 @@
 # Curve Smoothing with Support Vector Regression using Radial Basis Function (RBF) kernel
-# SVR(kernel='rbf', degree=3, gamma='auto', coef0=0.0, tol=0.001,
-#     C=1.0, epsilon=0.1, shrinking=True, cache_size=200, verbose=False, max_iter=-1)
+# Written by Rosie Zou, June 2017
+
+# syntax for calling the support vector regression function
+#     SVR(kernel='rbf', degree=3, gamma='auto', coef0=0.0, tol=0.001,
+#         C=1.0, epsilon=0.1, shrinking=True, cache_size=200, verbose=False, max_iter=-1)
 
 # Sample data input format:
 # {"time":1009,"sensor":"gyro","data":[-1.54875,12.19750,11.36625]}

@@ -37,7 +37,7 @@ This project is created in Clion using a library called `platformio`. In order f
   step.
 * Import this project in CLion and you are good to go.
 * For further help regarding this let Deep Dhillon know.
-  
+
 
 ## IMU Sensor
 This library contains code to control Adafruit IMUs to reliably determine pod position. For further
@@ -53,4 +53,5 @@ This library contains scripts for data processing and functional estimation. It 
 * FakeData.csv - randomly generated test set containing 1000 lines of time-x-y-z data points.<br/>
 
 Invoke the scripts from the node server in the following order:
-SVR.py -> halbach_model.py -> RF.py (this will perform preliminary curve smoothing, theoretical value calculations, and regression on the error range)
+SVR.py -> halbach_model.py -> RF.py (this will perform preliminary curve smoothing, theoretical value calculations, and regression on the error range) <br/> <br/>
+* SVR.py: A general-purpose data processing tool for any time-vs-XYZ data. Function SVR_process_monotype(JSONArray) takes an array of JSON objects of the same type, processes the data, then returns the array of objects in the same format as the input. If the script is run in a standalone sandbox, the demo script also executes & produces a simulation graph.

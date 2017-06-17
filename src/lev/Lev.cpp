@@ -17,7 +17,7 @@ Lev::~Lev() {
 }
 
 int Lev::get_distance() {
-	return analogRead(DISTANCE_PIN)
+	return analogRead(DISTANCE_PIN);
 }
 
 int Lev::get_DPR() {

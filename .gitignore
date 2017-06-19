@@ -6,3 +6,5 @@ src/imu/main.cpp
 .piolibdeps
 *.make
 .idea
+main.cpp
+

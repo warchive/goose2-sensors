@@ -16,12 +16,12 @@ Lev::~Lev() {
 
 }
 
-int Lev::get_distance() {
-	return analogRead(distance_pin);
+float Lev::get_distance() {
+	return (float)analogRead(distance_pin);
 }
 
-int Lev::get_DPR() {
-	return analogRead(dpr_pin);
+float Lev::get_DPR() {
+	return (float)analogRead(dpr_pin);
 }
 
 void Lev::print_distance() {

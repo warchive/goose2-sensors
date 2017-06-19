@@ -16,12 +16,22 @@ Lev::~Lev() {
 
 }
 
+int Lev::get_distance_raw() {
+	return analogRead(distance_pin);
+}
+
+int Lev::get_DPR_raw() {
+	return analogRead(dpr_pin);
+}
+
 float Lev::get_distance() {
-	return (float)analogRead(distance_pin);
+	float scaled = get_distance_raw() / 1023.0 * (MAX_DISTANCE - MIN_DISTANCE);
+	return scaled + MIN_DISTANCE;
 }
 
 float Lev::get_DPR() {
-	return (float)analogRead(dpr_pin);
+	float scaled = get_DPR_raw() / 1023.0 * (MAX_DPR - MIN_DPR);
+	return scaled + MIN_DPR;
 }
 
 void Lev::print_distance() {

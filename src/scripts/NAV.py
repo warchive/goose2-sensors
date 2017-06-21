@@ -53,10 +53,33 @@ def calcLinearVelocity(ACCELArray):
 
     print(returnArray)
     return returnArray
+
+## AngularVelocity = LinearVelocity/AngleInRPM(Radian)
+##     x/y/z gyro data in +/- 245 degrees
+def calcAngularVelocity(ACCELArray, GYROArray):
+    velocities = calcLinearVelocity(ACCELArray)
+    xVel = velocities["xVelocity"]
+    yVel = velocities["yVelocity"]
+    zVel = velocities["zVelocity"]
+    if (GYROArray[0]["sensor"] != "gyro"):
+        return "Gyroscope data needed"
+    else:
+        size = len(GYROArray)
+        x = []
+        y = []
+        z = []
+        t = []
+        for count in range(size):
+            x.append(GYROArray[count]["data"][0])
+            y.append(GYROArray[count]["data"][1])
+            z.append(GYROArray[count]["data"][2])
+            t.append(GYROArray[count]["time"])
+    # loop through the velocity arrays and divide by radian
+
 #
-# def calcAngularVelocity(ACCELArray, GYROArray):
-#
-#
+# longitude acceleration +-2g
+# lateral acceleration +- 1g
+# vertical acceleration +- 1g
 #
 def calcLinearDisplacement(ACCELArray):
     velocities = calcLinearVelocity(ACCELArray)

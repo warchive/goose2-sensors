@@ -24,7 +24,7 @@ void Color_Sensor::get_limitOut1(){
 }
 
 void Color_Sensor::get_limitOut2(){
- Out2 = analogRead(2);
+   Out2 = analogRead(2);
    //Limiting outputs to 0 & 1, instead of 0 - 1023
    if(Out2 >= 1000)
     {
@@ -36,7 +36,7 @@ void Color_Sensor::get_limitOut2(){
 }
 
 void Color_Sensor::get_limitOut3(){
-Out3 = analogRead(3);
+   Out3 = analogRead(3);
    //Limiting outputs to 0 & 1, instead of 0 - 1023
     if(Out3 >= 1000)
    {
@@ -48,10 +48,10 @@ Out3 = analogRead(3);
 }
 
 void Color_Sensor::counter() {
-   //2 loops that look at the change from Out1 == 0 to Out1 == 1, to count the # of times the orange stripe has been 'seen' by the sensor
+  //2 loops that look at the change from Out1 == 0 to Out1 == 1, to count the # of times the orange stripe has been 'seen' by the sensor
 
-   Serial.begin(9600);
-   float colorData = new float(4); 
+  Serial.begin(9600);
+  float colorData = new float(4); 
    
   if(Out1 == 1 && Out2 == 0 && Out3 == 0)
   {
@@ -81,7 +81,7 @@ void Color_Sensor::counter() {
   
   colorData[0] = Out1, 
   colorData[1] = Out2;
-  colorData[2] = Out 3;
+  colorData[2] = Out3;
   colorData[3] = count;
 
   Serial.println(data_handler.getJSONString(sensor_name, colorData, 4));

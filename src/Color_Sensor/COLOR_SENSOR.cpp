@@ -1,8 +1,6 @@
 #include "COLOR_SENSOR.h"
 #include "shared/DataHandler.h"
 
-
-
 Color_Sensor::Color_Sensor() {
   int Out1 = 0;
   int temp = Out1;
@@ -36,7 +34,6 @@ void Color_Sensor::get_limitOut2(){
       Out2 = 0;
     }
 }
-
 
 void Color_Sensor::get_limitOut3(){
 Out3 = analogRead(3);

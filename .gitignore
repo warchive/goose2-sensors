@@ -2,3 +2,9 @@
 .piolibdeps
 CMakeListsPrivate.txt
 src/imu/main.cpp
+.pioenvs
+.piolibdeps
+*.make
+.idea
+main.cpp
+cmake-build-debug

@@ -1,11 +1,12 @@
-//The code I used for testing. A few issues with the counter.
-
-
 int Out1 = 0;
 int temp = Out1;
 int Out2 = 0;
 int Out3 = 0;
 int count = 0;
+
+#include "COLOR_SENSOR.h"
+
+Color_Sensor sensor();
 
 void setup()
 {
@@ -97,3 +98,10 @@ void read_limitOut3()
     Out3 = 0;
    }
 }
+
+
+
+
+
+
+

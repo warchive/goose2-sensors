@@ -8,9 +8,9 @@ public:
     Color_Sensor();
     ~Color_Sensor();
 
-    int out1;
-    int out2;
-    int out3;
+    int Out1;
+    int Out2;
+    int Out3;
     int temp;
     int count;
     
@@ -19,10 +19,8 @@ public:
     void get_limitOut3();
     void counter();
   
-
 private:
-    DataHandler data_handler;
-    
+    DataHandler data_handler;    
 };
 
 #endif

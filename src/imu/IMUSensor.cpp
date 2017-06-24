@@ -51,7 +51,7 @@ void IMUSensor::setupGyro(int scale = 245, int sampleRate = 3, bool flipX = fals
     imu.settings.gyro.flipZ = flipZ;
 }
 
-void IMUSensor::setupAccel(int scale = 8, int sampleRate = 1) {
+void IMUSensor::setupAccel(int scale = 4, int sampleRate = 1) {
     imu.settings.accel.scale = scale;
     imu.settings.accel.sampleRate = sampleRate;
 }

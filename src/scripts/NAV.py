@@ -61,6 +61,7 @@ def calcAngularVelocity(ACCELArray, GYROArray):
     xVel = velocities["xVelocity"]
     yVel = velocities["yVelocity"]
     zVel = velocities["zVelocity"]
+    returnArray = {}
     if (GYROArray[0]["sensor"] != "gyro"):
         return "Gyroscope data needed"
     else:
@@ -74,6 +75,23 @@ def calcAngularVelocity(ACCELArray, GYROArray):
             y.append(GYROArray[count]["data"][1])
             z.append(GYROArray[count]["data"][2])
             t.append(GYROArray[count]["time"])
+
+        map(lambda x: (float)(x / 180), x)
+        map(lambda x: (float)(x / 180), y)
+        map(lambda x: (float)(x / 180), z)
+
+        for i in range(size):
+            xVel[i] = (float)(xVel[i]/x[i])
+            yVel[i] = (float)(yVel[i]/y[i])
+            zVel[i] = (float)(zVel[i]/z[i])
+
+        returnArray["time"] = t
+        returnArray["xAngVelocity"] = xVel
+        returnArray["yAngVelocity"] = yVel
+        returnArray["zAngVelocity"] = zVel
+
+        print(returnArray)
+        return returnArray
     # loop through the velocity arrays and divide by radian
 
 #
@@ -111,7 +129,42 @@ def calcLinearDisplacement(ACCELArray):
 #
 #
 #
-# def calcAngularDisplacement(ACCELArray, GYROArray):
+def calcAngularDisplacement(ACCELArray, GYROArray):
+    displacement = calcLinearDisplacement(ACCELArray)
+    xDisp = displacement["xDisplacement"]
+    yDisp = displacement["yDisplacement"]
+    zDisp = displacement["zDisplacement"]
+    returnArray = {}
+    if (GYROArray[0]["sensor"] != "gyro"):
+        return "Gyroscope data needed"
+    else:
+        size = len(GYROArray)
+        x = []
+        y = []
+        z = []
+        t = []
+        for count in range(size):
+            x.append(GYROArray[count]["data"][0])
+            y.append(GYROArray[count]["data"][1])
+            z.append(GYROArray[count]["data"][2])
+            t.append(GYROArray[count]["time"])
+
+        map(lambda x: (float)(x / 180), x)
+        map(lambda x: (float)(x / 180), y)
+        map(lambda x: (float)(x / 180), z)
+
+        for i in range(size):
+            xDisp[i] = (float)(xDisp[i]/x[i])
+            yDisp[i] = (float)(yDisp[i]/y[i])
+            zDisp[i] = (float)(zDisp[i]/z[i])
+
+        returnArray["time"] = t
+        returnArray["xAngDisplacement"] = xDisp
+        returnArray["yAngDisplacement"] = yDisp
+        returnArray["zAngDisplacement"] = zDisp
+
+        print(returnArray)
+        return returnArray
 
 DemoData = []
 for i in range(50):

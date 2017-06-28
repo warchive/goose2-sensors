@@ -1,5 +1,8 @@
+/*
 //The code I used for testing. A few issues with the counter.
 
+
+#include <Arduino.h>
 
 int Out1 = 0;
 int temp = Out1;
@@ -97,3 +100,4 @@ void read_limitOut3()
     Out3 = 0;
    }
 }
+*/

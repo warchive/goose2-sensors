@@ -4,13 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/git/waterloop_projects/sensors/src/color/ColorSensor.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj"
+  "D:/git/waterloop_projects/sensors/src/color/Color_Sensor.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/imu/IMU.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj"
-  "D:/git/waterloop_projects/sensors/src/imu/IMUSensor.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/IMUSensor.cpp.obj"
-  "D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUAccel.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/imu_components/IMUAccel.cpp.obj"
-  "D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUComponent.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/imu_components/IMUComponent.cpp.obj"
-  "D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUGyro.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/imu_components/IMUGyro.cpp.obj"
-  "D:/git/waterloop_projects/sensors/src/imu/imu_components/IMUMag.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/imu_components/IMUMag.cpp.obj"
+  "D:/git/waterloop_projects/sensors/src/imu/IMUPool.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/imu/main.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/main.cpp.obj"
+  "D:/git/waterloop_projects/sensors/src/lev/Lev.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/shared/DataHandler.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -19,24 +18,21 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ARDUINO=10618"
   "ARDUINO_ARCH_AVR"
-  "ARDUINO_AVR_MEGA2560"
+  "ARDUINO_AVR_UNO"
   "F_CPU=16000000L"
   "PLATFORMIO=30301"
-  "__AVR_ATmega2560__"
+  "__AVR_ATmega328P__"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"
-  "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/mega"
-  "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"
-  "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"
-  "../lib/SparkFunLSM9DS1/src"
-  "../lib/StandardCplusplus"
+  "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/standard"
   "../lib/ArduinoJson/src"
+  "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"
+  "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"
+  "../lib/SparkFunLSM9DS1/src"
   "../src"
-  "../lib/Adafruit_LSM9DS1"
-  "../lib/Adafruit_Sensor"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Servo/src"

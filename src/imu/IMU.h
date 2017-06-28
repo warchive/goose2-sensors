@@ -1,5 +1,7 @@
 //
 // Created by Deep on 2017-06-27.
+// Description: IMU handles accelerometer, gyroscope and magnetometer and provides
+//              an interface to access the data and manage the sensors.
 //
 
 #ifndef NEW_SENSORS_IMU_H

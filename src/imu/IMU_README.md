@@ -1,11 +1,11 @@
 # IMU Sensors
 
-This subsystem controls all the IMU sensors on the pod. Each sensor contains three types of sub sensors.
+This controls all the IMU sensors on the pod. Each sensor contains three types of sub sensors.
 These sub sensors are `GyroScope`, `Accelerometer` and `Magnetometer`. The data gathered from each sensor is in JSON format.
 
 Example JSON data returned:
 
-```C++
+```cpp
 // This contains data from Gyroscope
 {"time":1009,"sensor":"gyro","data":[-1.54875,12.19750,11.36625]}
 
@@ -20,35 +20,35 @@ More about data recieved is mentioned later on.
 
 ## How to Use
 
-This set of sensors are controlled by `IMU` class. An Object must be created of this class to gather data from all the sensor. To create an object, you have to pass in a parameter to specify how many imu sensors are on the pod
+This set of sensors are controlled by `IMUPool` class. An Object must be created of this class to gather data from all the sensor. To create an object, you have to pass in a parameter to specify how many imu sensors are on the pod
 
-```C++
-IMU imus(2);            // create 2 imu sensors
+```cpp
+IMUPool imus(2);            // create 2 imu sensors
 ```
 
-Before recording any sensor values, we have to check if all the imu sensors are working. To do this, call `sensors_working` method and it will return true to signal the working of all the sensors and false even if one sensor is not working
+Before recording any sensor values, we have to check if all the imu sensors are working. To do this, call `sensorsWorking` method and it will return true to signal the working of all the sensors and false even if one sensor is not working
 
-```C++
-if (imus.sensors_working()){}    // success
-else{}                           // failure
+```cpp
+if (imus.sensorsWorking()){}    // success
+else{}                          // failure
 ```
 
 ### Overview of functions to gather data
 Each component of IMU sensor returns x, y and z values. Since the data is formatted in JSON format, the data received by any function call includes x, y and z for that particular sensor. JSON format also includes a time in milliseconds. This time is the time elapsed since the Arduino has started working.
 
 Data in JSON format cannot be received as a string but rather you can print it directly to the Serial. To do this you can make
-a call `serial_print`.
+a call `serialPrint`.
 
-```C++
-imus.serial_print(0, GYRO);        // data for Gyroscope from sensor 0
-imus.serial_print(1, ACCEL);    // data for Accelerometer from sensor 1
-imus.serial_print(1, MAG);         // data for Magnetometer from sensor 1
+```cpp
+imus.serialPrint(0, GYRO);        // data for Gyroscope from sensor 0
+imus.serialPrint(1, ACCEL);    // data for Accelerometer from sensor 1
+imus.serialPrint(1, MAG);         // data for Magnetometer from sensor 1
 ```
 
 If for some reason read fails for any component of any sensor, the output for that component will be `-99999.00000` for x, y and z axis.
 Since the value of any sensor component will never be `-99999.00000`, we can detect failure and take actions accordingly.
 
-```C++
+```cpp
 // In this data, Gyroscope read failed
 {"time":1039,"sensor":"gyroscope":[-99999.00000,-99999.00000,-99999.00000]}
 ```
@@ -56,29 +56,27 @@ Since the value of any sensor component will never be `-99999.00000`, we can det
 Now that above functions return values for Serial communications, we may need values in float format so that our pod can utilize them.
 In order to do that, there are following functions:
  
-```C++
-imus.get_x(0, GYRO);                 // x data for Gyroscope and from sensor 0
-imus.get_y(1, ACCEL);                // y data for Accelerometer and from sensor 1
-imus.get_z(1, MAG);                  // z data for Magnetometer and from sensor 1
+```cpp
+imus.getX(0, GYRO);                 // x data for Gyroscope and from sensor 0
+imus.getY(1, ACCEL);                // y data for Accelerometer and from sensor 1
+imus.getZ(1, MAG);                  // z data for Magnetometer and from sensor 1
 ```
 
-
-
-To get the number of sensors in the subsystem, call the method `get_sensor_total`. 
+To get the number of sensors in the subsystem, call the method `getTotal`. 
 
 ```C++
-imus.get_sensor_total();         // will return 2 based on our declaration of the object above
+imus.getTotal();                    // will return 2 based on our declaration of the object above
 ```
 
-## Documentation of IMUSensor class used by IMUSubsystem class
+## Documentation of IMU class used by IMUPool class
 
-`IMUSensor` class is used by IMUSubsystem to make everything work. A client can choose to use `IMUSensor` class if he/she wishes to do so. Keep in mind this class only supports one IMU sensor and does not return data in JSON format. But, this class can be modified to change the functionality of each components for IMU sensor. These changes will also show up on `IMUSubsystem`.
+`IMU` class is used by IMUPool to make everything work. A client can choose to use `IMU` class if he/she wishes to do so. Keep in mind this class only supports one IMU sensor and does not return data in JSON format. But, this class can be modified to change the functionality of each components for IMU sensor. These changes will also show up on `IMUPool`.
 
 Create an object of this class.
 
-```C++
-IMUSensor sensor;
-```	
+```cpp
+IMU sensor;
+```
 
 If you are not satisfied by how `Gyroscope` or `Accelerometer` or `Magnetometer` component works and outputs data, you can change  the settings of each component using `setup` methods. These methods have default values so you do not have to specify every parameter.
 

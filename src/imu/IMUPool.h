@@ -1,9 +1,10 @@
 /*
- * IMUSubsystem.h
+ * IMUPool.h
  *
  *  Created on: May 27, 2017
  *  Author: Deep
- *  Description: IMU holds number of IMU sensors' objects and handles data related to them
+ *  Description: IMUPool holds number of IMU sensors' objects and handles data related to them. It provides
+ *               access to data in both JSON and regular format
  */
 
 #ifndef SRC_IMUSUBSYSTEM_H_
@@ -26,10 +27,10 @@ public:
     ~IMUPool();
 
     // sensor_working() returns true if all sensors are working and false otherwise
-    bool sensors_working();
+    bool sensorsWorking();
 
     // serialPrint() prints data from component of the sensor to the Serial in JSON format
-    void serial_print(unsigned int sensor, imu_comp component);
+    void serialPrint(unsigned int sensor, imu_comp component);
 
     // getSensorTotal() returns the number of sensors in the subsystem
     int getTotal();
@@ -42,8 +43,6 @@ public:
 
     // getZ() returns the z value of the component from the particular system
     float getZ(unsigned int system, imu_comp component);
-
-    IMU *operator[](int &index);
 };
 
 #endif

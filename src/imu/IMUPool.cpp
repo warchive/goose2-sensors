@@ -24,7 +24,7 @@ IMUPool::~IMUPool() {
 }
 
 
-bool IMUPool::sensors_working() {
+bool IMUPool::sensorsWorking() {
     for (unsigned int i = 0; i < sensor_total; i++)
         if (!sensors[i]->isStarted())
             return false;
@@ -33,7 +33,7 @@ bool IMUPool::sensors_working() {
 }
 
 
-void IMUPool::serial_print(unsigned int sensor, imu_comp comp) {
+void IMUPool::serialPrint(unsigned int sensor, imu_comp comp) {
     float *comp_data = new float[4];
 
     comp_data[0] = sensor;

@@ -1,94 +1,116 @@
-/*
- * IMUSubsystem.cpp
- *
- *  Created on: May 27, 2017
- *  Author: Deep
- *  Description: Implementation of IMU class
- */
+//
+// Created by Deep on 2017-06-27.
+// Description: IMU handles accelerometer, gyroscope and magnetometer and provides
+//              an interface to access the data and manage the sensors
 
 #include "IMU.h"
+#include <Wire.h>
 
-IMU::IMU(unsigned int num_sensors) : sensor_total{num_sensors}{
-    sensors = new IMUSensor*[sensor_total];
+IMU::IMU() {
+    imu.begin();
+    imu.calibrate();
+    imu.calibrateMag();
+}
 
-    for (unsigned int i = 0; i < sensor_total; i++) {
-        sensors[i] = new IMUSensor;
+
+bool IMU::isStarted(){
+    return imu.begin() != 0;
+}
+
+
+void IMU::setupGyro(uint8_t scale, uint8_t sampleRate, uint8_t flipX, uint8_t flipY, uint8_t flipZ) {
+    imu.settings.gyro.scale = scale;
+    imu.settings.gyro.sampleRate = sampleRate;
+    imu.settings.gyro.flipX = flipX;
+    imu.settings.gyro.flipY = flipY;
+    imu.settings.gyro.flipZ = flipZ;
+}
+
+
+void IMU::setupAccel(uint8_t scale, uint8_t sampleRate) {
+    imu.settings.accel.scale = scale;
+    imu.settings.accel.sampleRate = sampleRate;
+}
+
+
+void IMU::setupMag(uint8_t scale, uint8_t sampleRate, uint8_t tempComp, uint8_t operatingMode) {
+    imu.settings.mag.scale = scale;
+    imu.settings.mag.sampleRate = sampleRate;
+    imu.settings.mag.tempCompensationEnable = tempComp;
+    imu.settings.mag.operatingMode = operatingMode;
+}
+
+
+float IMU::getX(imu_comp comp) {
+    if(comp == GYRO){
+        if (imu.gyroAvailable()){
+            imu.gx = imu.readGyro(X_AXIS);
+            return imu.calcGyro(imu.gx);
+        } else
+            return error_val;
+    } else if (comp == ACCEL){
+        if (imu.accelAvailable()){
+            imu.ax = imu.readAccel(X_AXIS);
+            return imu.calcAccel(imu.ax);
+        } else
+            return error_val;
+    } else if (comp == MAG){
+        if (imu.magAvailable()){
+            imu.mx = imu.readMag(X_AXIS);
+            return imu.calcMag(imu.mx);
+        } else
+            return error_val;
     }
+
+    return error_val;
 }
 
-IMU::~IMU() {
-    for (unsigned int i = 0; i < sensor_total; i++) {
-        delete sensors[i];
+
+float IMU::getY(imu_comp comp) {
+    if(comp == GYRO){
+        if (imu.gyroAvailable()){
+            imu.gy = imu.readGyro(Y_AXIS);
+            return imu.calcGyro(imu.gy);
+        } else
+            return error_val;
+    } else if (comp == ACCEL){
+        if (imu.accelAvailable()){
+            imu.ay = imu.readAccel(Y_AXIS);
+            return imu.calcAccel(imu.ay);
+        } else
+            return error_val;
+    } else if (comp == MAG){
+        if (imu.magAvailable()){
+            imu.my = imu.readMag(Y_AXIS);
+            return imu.calcMag(imu.my);
+        } else
+            return error_val;
     }
 
-    delete sensors;
+    return error_val;
 }
 
-bool IMU::sensors_working() {
-    for (unsigned int i = 0; i < sensor_total; i++) {
-        if (!sensors[i]->isStarted())
-            return false;
+
+float IMU::getZ(imu_comp comp) {
+    if(comp == GYRO){
+        if (imu.gyroAvailable()){
+            imu.gz = imu.readGyro(Z_AXIS);
+            return imu.calcGyro(imu.gz);
+        } else
+            return error_val;
+    } else if (comp == ACCEL){
+        if (imu.accelAvailable()){
+            imu.az = imu.readAccel(Z_AXIS);
+            return imu.calcAccel(imu.az);
+        } else
+            return error_val;
+    } else if (comp == MAG){
+        if (imu.magAvailable()){
+            imu.mz = imu.readMag(Z_AXIS);
+            return imu.calcMag(imu.mz);
+        } else
+            return error_val;
     }
 
-    return true;
-}
-
-void IMU::serial_print(unsigned int sensor, int component) {
-    float *comp_data = new float[3];
-
-    if (sensors[sensor]->read(component)) {
-        comp_data[0] = sensors[sensor]->getX(GYRO);
-        comp_data[1] = sensors[sensor]->getY(GYRO);
-        comp_data[2] = sensors[sensor]->getZ(GYRO);
-    } else{
-        comp_data[0] = comp_data[1] = comp_data[2] = stop_value;
-    }
-
-    // check of values are valid
-    if (comp_data[0] < -1000 || comp_data[0] > 1000)
-        comp_data[0] = stop_value;
-    if (comp_data[1] < -1000 || comp_data[1] > 1000)
-        comp_data[1] = stop_value;
-    if (comp_data[2] < -1000 || comp_data[2] > 1000)
-        comp_data[2] = stop_value;
-
-
-    String sensor_name = "";
-
-    if (component == GYRO)
-        sensor_name = "gyro";
-    else if (component == ACCEL)
-        sensor_name = "accelerometer";
-    else
-        sensor_name = "magnetometer";
-
-    Serial.println(data_handler.getJSONString(sensor_name, comp_data, 3));
-
-    delete [] comp_data;
-}
-
-
-int IMU::get_sensor_total() {
-    return sensor_total;
-}
-
-float IMU::get_x(unsigned int sensor, int component) {
-    if (sensors[sensor]->read(component)) {
-        return sensors[sensor]->getX(component);
-    } else
-        return stop_value;
-}
-
-float IMU::get_y(unsigned int sensor, int component) {
-    if (sensors[sensor]->read(component)) {
-        return sensors[sensor]->getY(component);
-    } else
-        return stop_value;
-}
-
-float IMU::get_z(unsigned int sensor, int component) {
-    if (sensors[sensor]->read(component)) {
-        return sensors[sensor]->getZ(component);
-    } else
-        return stop_value;
+    return error_val;
 }

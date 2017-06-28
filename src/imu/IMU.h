@@ -1,50 +1,74 @@
-/*
- * IMUSubsystem.h
- *
- *  Created on: May 27, 2017
- *  Author: Deep
- *  Description: IMU holds number of IMU sensors' objects and handles data related to them
- */
+//
+// Created by Deep on 2017-06-27.
+//
 
-#ifndef SRC_IMUSUBSYSTEM_H_
-#define SRC_IMUSUBSYSTEM_H_
+#ifndef NEW_SENSORS_IMU_H
+#define NEW_SENSORS_IMU_H
 
-#include "IMUSensor.h"
-#include "shared/DataHandler.h"
 
-class IMU {
-    private:
-        IMUSensor **sensors;
+#include <SparkFunLSM9DS1.h>
 
-        const unsigned int sensor_total;
-
-        // default values for x, y and z when sensor component stops working
-        const long stop_value = -99999;
-
-        DataHandler data_handler;
-
-public:
-    IMU(unsigned int num_sensors);
-
-    ~IMU();
-
-    // sensor_working() returns true if all sensors are working and false otherwise
-    bool sensors_working();
-
-    // serialPrint() prints data from component of the sensor to the Serial in JSON format
-    void serial_print(unsigned int sensor, int component);
-
-    // getSensorTotal() returns the number of sensors in the subsystem
-    int get_sensor_total();
-
-    // getX() returns the x value of the component from the particular system
-    float get_x(unsigned int system, int component);
-
-    // getY() returns the y value of the component from the particular system
-    float get_y(unsigned int system, int component);
-
-    // getZ() returns the z value of the component from the particular system
-    float get_z(unsigned int system, int component);
+enum imu_comp {
+    GYRO = 0,
+    ACCEL = 1,
+    MAG = 2
 };
 
-#endif
+class IMU {
+    LSM9DS1 imu;
+    const float error_val = -99999.00000;
+public:
+    IMU();
+
+    // isStarted() returns true if IMU sensor has started and false otherwise
+    bool isStarted();
+
+    // setupGyro() specifies the settings for the gyroscope.
+    // * scale sets the full-scale range of the gyroscope. scale can be set to either 245, 500, or 2000
+    // * sampleRatesets the output data rate (ODR) of the gyro
+    //   sampleRate can be set between 1-6
+    // 	 1 = 14.9    4 = 238
+    //   2 = 59.5    5 = 476
+    //   3 = 119     6 = 952
+    // * flipX, flipY, and flipZ are booleans that can automatically switch the positive/negative
+    //   orientation of the three gyro axes.
+    void setupGyro(uint8_t scale = 245, uint8_t sampleRate = 3, uint8_t flipX = false,
+                   uint8_t flipY = false, uint8_t flipZ = false);
+
+    // setupAccel() specifies the settings for the accelerometer.
+    // * scale sets the full-scale range of accelerometer. The scale can be 2, 4, 8 or 16
+    // * sampleRate sets the output data rate of the accelerometer. If Gyroscope is running,
+    //   the sample rate is same as gyroscope. Same rate can be be 1-6:
+    //   1 = 10 Hz    4 = 238 Hz
+    //   2 = 50 Hz    5 = 476 Hz
+    //   3 = 119 Hz   6 = 952 Hz
+    void setupAccel(uint8_t scale = 8, uint8_t sampleRate = 1);
+
+    // setupMag() specifies the settings for the magnetometer.
+    // * scale sets the full-scale range of the magnetometer. Mag scale can be 4, 8, 12, or 16
+    // * sampleRate sets the output data rate (ODR) of the magnetometer.
+    //   mag data rate can be 0-7:
+    //   0 = 0.625 Hz  4 = 10 Hz
+    //   1 = 1.25 Hz   5 = 20 Hz
+    //   2 = 2.5 Hz    6 = 40 Hz
+    //   3 = 5 Hz      7 = 80 Hz
+    // * tempComp enables or disables temperature compensation of the magnetometer.
+    // * operatingMode sets the operating mode of the magnetometer. operatingMode can be 0-2:
+    //   0 = continuous conversion
+    //   1 = single-conversion
+    //   2 = power down
+    void setupMag(uint8_t scale = 12, uint8_t sampleRate = 5, uint8_t tempComp = false,
+                  uint8_t operatingMode = 0);
+
+    // getX() returns the x value of the component
+    float getX(imu_comp comp);
+
+    // getY() returns the y value of the component
+    float getY(imu_comp comp);
+
+    // getZ() returns the z value of the component
+    float getZ(imu_comp comp);
+};
+
+
+#endif //NEW_SENSORS_IMU_H

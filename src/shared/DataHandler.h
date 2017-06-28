@@ -16,7 +16,7 @@
 class DataHandler {
     public:
         // getJSONString() creates and returns a JSON string from the particular sensor
-        String getJSONString(String sensor_name, float *sensor_data, int num_data);
+        String getJSONString(const String &sensor_name, const float *sensor_data, const int &num_data);
 };
 
 #endif

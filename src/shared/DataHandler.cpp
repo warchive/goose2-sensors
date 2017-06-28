@@ -8,10 +8,11 @@
 
 #include "DataHandler.h"
 
-String DataHandler::getJSONString(String sensor_name, float *sensor_data, int num_data) {
-    const int BUFFER_SIZE = JSON_OBJECT_SIZE(3) + JSON_ARRAY_SIZE(3);
+String DataHandler::getJSONString(const String &sensor_name,
+                                  const float *sensor_data, const int &num_data) {
+   const size_t BUFFER_SIZE = JSON_OBJECT_SIZE(3) + JSON_ARRAY_SIZE(num_data) + 70;
 
-    StaticJsonBuffer <BUFFER_SIZE> buffer;
+    DynamicJsonBuffer buffer(BUFFER_SIZE);
 
     JsonObject& sensor = buffer.createObject();
     sensor["time"] = millis();
@@ -19,9 +20,8 @@ String DataHandler::getJSONString(String sensor_name, float *sensor_data, int nu
 
     JsonArray &data = sensor.createNestedArray("data");
 
-    for (int i = 0; i < num_data; ++i) {
+    for (int i = 0; i < num_data; ++i)
         data.add(sensor_data[num_data]);
-    }
 
     String json_string;
     sensor.printTo(json_string);

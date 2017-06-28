@@ -248,6 +248,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/Temp/TMP36.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/Temp/TMP36.h">
+			<Option target="sensors"/>
+		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/color/ColorSensor.cpp">
 			<Option target="sensors"/>
 		</Unit>

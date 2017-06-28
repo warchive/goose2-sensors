@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/git/waterloop_projects/sensors/src/Temp/TMP36.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/color/ColorSensor.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/color/Color_Sensor.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/imu/IMU.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj"

@@ -226,6 +226,33 @@ sensors/fast:
 	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/build
 .PHONY : sensors/fast
 
+src/Temp/TMP36.obj: src/Temp/TMP36.cpp.obj
+
+.PHONY : src/Temp/TMP36.obj
+
+# target to build an object file
+src/Temp/TMP36.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj
+.PHONY : src/Temp/TMP36.cpp.obj
+
+src/Temp/TMP36.i: src/Temp/TMP36.cpp.i
+
+.PHONY : src/Temp/TMP36.i
+
+# target to preprocess a source file
+src/Temp/TMP36.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.i
+.PHONY : src/Temp/TMP36.cpp.i
+
+src/Temp/TMP36.s: src/Temp/TMP36.cpp.s
+
+.PHONY : src/Temp/TMP36.s
+
+# target to generate assembly for a file
+src/Temp/TMP36.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.s
+.PHONY : src/Temp/TMP36.cpp.s
+
 src/color/ColorSensor.obj: src/color/ColorSensor.cpp.obj
 
 .PHONY : src/color/ColorSensor.obj
@@ -432,6 +459,9 @@ help:
 	@echo ... sensors
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... src/Temp/TMP36.obj
+	@echo ... src/Temp/TMP36.i
+	@echo ... src/Temp/TMP36.s
 	@echo ... src/color/ColorSensor.obj
 	@echo ... src/color/ColorSensor.i
 	@echo ... src/color/ColorSensor.s

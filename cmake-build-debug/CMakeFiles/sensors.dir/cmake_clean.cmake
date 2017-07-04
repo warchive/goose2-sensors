@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/sensors.dir/src/DocMain.cpp.obj"
+  "CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.obj"
   "CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj"
   "CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj"
   "CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj"

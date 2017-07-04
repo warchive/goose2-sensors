@@ -1,8 +1,10 @@
-//
-// Created by Deep on 2017-06-27.
-// Description: IMU handles accelerometer, gyroscope and magnetometer and provides
-//              an interface to access the data and manage the sensors.
-//
+/*!
+ * @author Deep Dhillon
+ * @date 2017-06-27
+ * @brief This class handles accelerometer, gyroscope and magnetometer and provides an interface
+ * to access the data and manage the sensors
+ */
+
 
 #ifndef NEW_SENSORS_IMU_H
 #define NEW_SENSORS_IMU_H
@@ -10,6 +12,23 @@
 
 #include <SparkFunLSM9DS1.h>
 
+
+/*!
+ * @enum imu_comp
+ * enum constants allow for the client to specify IMU component
+ */
+/*!
+ * @var imu_comp:GYRO
+ * Should be used to access data for gyroscope
+ */
+/*!
+ * @var imu_comp:ACCEL
+ * Should be used to access data for accelerometer
+ */
+/*!
+ * @var imu_comp:MAG
+ * Should be used to access data for magnetometer
+ */
 enum imu_comp {
     GYRO = 0,
     ACCEL = 1,
@@ -18,57 +37,66 @@ enum imu_comp {
 
 class IMU {
     LSM9DS1 imu;
-    const float error_val = -99999.00000;
+    const float error_val = -99999.00000; /*!<when a sensor does not have a value, this error value is given */
 public:
+    /*!
+     * Single no param constructor that creates initializes imu and makes it ready to supply data
+     */
     IMU();
 
-    // isStarted() returns true if IMU sensor has started and false otherwise
+    /*!
+     * This method returns true if sensor is working and false otherwise
+     * @return the status of sensor running
+     */
     bool isStarted();
 
-    // setupGyro() specifies the settings for the gyroscope.
-    // * scale sets the full-scale range of the gyroscope. scale can be set to either 245, 500, or 2000
-    // * sampleRatesets the output data rate (ODR) of the gyro
-    //   sampleRate can be set between 1-6
-    // 	 1 = 14.9    4 = 238
-    //   2 = 59.5    5 = 476
-    //   3 = 119     6 = 952
-    // * flipX, flipY, and flipZ are booleans that can automatically switch the positive/negative
-    //   orientation of the three gyro axes.
-    void setupGyro(uint8_t scale = 245, uint8_t sampleRate = 3, uint8_t flipX = false,
-                   uint8_t flipY = false, uint8_t flipZ = false);
+    /*!
+     * Specifies the settings for the gyroscope
+     * @param scale is the full-scale range of gyroscope. It can be set to either 245, 500, or 2000
+     * @param sampleRate is the output data rate of gyro. It can be set between 1 and 6
+     * @param flipX switches the positive/negative orientation of x axis
+     * @param flipY switches the positive/negative orientation of y axis
+     * @param flipZ switches the positive/negative orientation of z axis
+     */
+    void setupGyro(uint8_t scale = 245, uint8_t sampleRate = 3, uint8_t flipX = (uint8_t)false,
+                   uint8_t flipY = (uint8_t)false, uint8_t flipZ = (uint8_t)false);
 
-    // setupAccel() specifies the settings for the accelerometer.
-    // * scale sets the full-scale range of accelerometer. The scale can be 2, 4, 8 or 16
-    // * sampleRate sets the output data rate of the accelerometer. If Gyroscope is running,
-    //   the sample rate is same as gyroscope. Same rate can be be 1-6:
-    //   1 = 10 Hz    4 = 238 Hz
-    //   2 = 50 Hz    5 = 476 Hz
-    //   3 = 119 Hz   6 = 952 Hz
+    /*!
+     * Specifies the settings for the accelerometer
+     * @param scale is the full-scale range of accelerometer. It can be set to either 2, 4, 8 or 16
+     * @param sampleRate is the output data range of accelerometer. It can be set between 1 and 6
+     */
     void setupAccel(uint8_t scale = 8, uint8_t sampleRate = 1);
 
-    // setupMag() specifies the settings for the magnetometer.
-    // * scale sets the full-scale range of the magnetometer. Mag scale can be 4, 8, 12, or 16
-    // * sampleRate sets the output data rate (ODR) of the magnetometer.
-    //   mag data rate can be 0-7:
-    //   0 = 0.625 Hz  4 = 10 Hz
-    //   1 = 1.25 Hz   5 = 20 Hz
-    //   2 = 2.5 Hz    6 = 40 Hz
-    //   3 = 5 Hz      7 = 80 Hz
-    // * tempComp enables or disables temperature compensation of the magnetometer.
-    // * operatingMode sets the operating mode of the magnetometer. operatingMode can be 0-2:
-    //   0 = continuous conversion
-    //   1 = single-conversion
-    //   2 = power down
-    void setupMag(uint8_t scale = 12, uint8_t sampleRate = 5, uint8_t tempComp = false,
+    /*!
+     * Specifies the settings or the magnetometer
+     * @param scale is the full scale range of magnetometer. It can be set to either 4, 8, 12 or 16
+     * @param sampleRate is the output data rate of the magnetometer. It can be set between 0 and 7
+     * @param tempComp enables or disables temperature compensation of the magnetometer
+     * @param operatingMode sets the operating mode of magnetometer. It can be between 0 and 2
+     */
+    void setupMag(uint8_t scale = 12, uint8_t sampleRate = 5, uint8_t tempComp = (uint8_t)false,
                   uint8_t operatingMode = 0);
 
-    // getX() returns the x value of the component
+    /*!
+     * Returns the x value of the component specified
+     * @param comp is the component for which x value is needed. It can be IMU, MAG or ACCEL
+     * @return the x value of that component
+     */
     float getX(imu_comp comp);
 
-    // getY() returns the y value of the component
+    /*!
+     * Returns the y value of the component specified
+     * @param comp is the component for which x value is needed. It can be IMU, MAG or ACCEL
+     * @return the y value of that component
+     */
     float getY(imu_comp comp);
 
-    // getZ() returns the z value of the component
+    /*!
+     * Returns the z value of the component specified
+     * @param comp is the component for which x value is needed. It can be IMU, MAG or ACCEL
+     * @return the z value of that component
+     */
     float getZ(imu_comp comp);
 };
 

@@ -1,7 +1,3 @@
-//
-// Created by Deep on 2017-06-28.
-//
-
 #include "TMP36.h"
 
 

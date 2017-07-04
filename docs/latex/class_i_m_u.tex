@@ -1,0 +1,156 @@
+\hypertarget{class_i_m_u}{}\section{I\+MU Class Reference}
+\label{class_i_m_u}\index{I\+MU@{I\+MU}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i_m_u_a5d36c5fa0688efe1a013679dbdcef4cc}{I\+MU} ()
+\item 
+bool \hyperlink{class_i_m_u_a252166103441e5b7ce10d123c9081505}{is\+Started} ()
+\item 
+void \hyperlink{class_i_m_u_afcb732654cf42908c921456bf6b2a3fd}{setup\+Gyro} (uint8\+\_\+t scale=245, uint8\+\_\+t sample\+Rate=3, uint8\+\_\+t flipX=(uint8\+\_\+t) false, uint8\+\_\+t flipY=(uint8\+\_\+t) false, uint8\+\_\+t flipZ=(uint8\+\_\+t) false)
+\item 
+void \hyperlink{class_i_m_u_a728c6535b560edafe756982d12f06db0}{setup\+Accel} (uint8\+\_\+t scale=8, uint8\+\_\+t sample\+Rate=1)
+\item 
+void \hyperlink{class_i_m_u_ac3aaf3be5c6b61c2bd08f23d76946842}{setup\+Mag} (uint8\+\_\+t scale=12, uint8\+\_\+t sample\+Rate=5, uint8\+\_\+t temp\+Comp=(uint8\+\_\+t) false, uint8\+\_\+t operating\+Mode=0)
+\item 
+float \hyperlink{class_i_m_u_a949d2a569dcf4b6d8e3ec31b3fb269cb}{getX} (imu\+\_\+comp comp)
+\item 
+float \hyperlink{class_i_m_u_af5a2bba6153657625fae0fdc8a228a40}{getY} (imu\+\_\+comp comp)
+\item 
+float \hyperlink{class_i_m_u_acbea044b92a2e2f2cc554af45692dc62}{getZ} (imu\+\_\+comp comp)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_m_u_a7f5e86aa84ecc823dfe5683bd1c1752d}\label{class_i_m_u_a7f5e86aa84ecc823dfe5683bd1c1752d}} 
+L\+S\+M9\+D\+S1 {\bfseries imu}
+\item 
+const float \hyperlink{class_i_m_u_ad516a2a064d93e7fc630f470cc5e50e1}{error\+\_\+val} = -\/99999.\+00000
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_m_u_a5d36c5fa0688efe1a013679dbdcef4cc}\label{class_i_m_u_a5d36c5fa0688efe1a013679dbdcef4cc}} 
+\index{I\+MU@{I\+MU}!I\+MU@{I\+MU}}
+\index{I\+MU@{I\+MU}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{I\+M\+U()}{IMU()}}
+{\footnotesize\ttfamily I\+M\+U\+::\+I\+MU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Single no param constructor that creates initializes imu and makes it ready to supply data 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_m_u_a949d2a569dcf4b6d8e3ec31b3fb269cb}\label{class_i_m_u_a949d2a569dcf4b6d8e3ec31b3fb269cb}} 
+\index{I\+MU@{I\+MU}!getX@{getX}}
+\index{getX@{getX}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{get\+X()}{getX()}}
+{\footnotesize\ttfamily float I\+M\+U\+::getX (\begin{DoxyParamCaption}\item[{imu\+\_\+comp}]{comp }\end{DoxyParamCaption})}
+
+Returns the x value of the component specified 
+\begin{DoxyParams}{Parameters}
+{\em comp} & is the component for which x value is needed. It can be \hyperlink{class_i_m_u}{I\+MU}, M\+AG or A\+C\+C\+EL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the x value of that component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_af5a2bba6153657625fae0fdc8a228a40}\label{class_i_m_u_af5a2bba6153657625fae0fdc8a228a40}} 
+\index{I\+MU@{I\+MU}!getY@{getY}}
+\index{getY@{getY}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{get\+Y()}{getY()}}
+{\footnotesize\ttfamily float I\+M\+U\+::getY (\begin{DoxyParamCaption}\item[{imu\+\_\+comp}]{comp }\end{DoxyParamCaption})}
+
+Returns the y value of the component specified 
+\begin{DoxyParams}{Parameters}
+{\em comp} & is the component for which x value is needed. It can be \hyperlink{class_i_m_u}{I\+MU}, M\+AG or A\+C\+C\+EL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the y value of that component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_acbea044b92a2e2f2cc554af45692dc62}\label{class_i_m_u_acbea044b92a2e2f2cc554af45692dc62}} 
+\index{I\+MU@{I\+MU}!getZ@{getZ}}
+\index{getZ@{getZ}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{get\+Z()}{getZ()}}
+{\footnotesize\ttfamily float I\+M\+U\+::getZ (\begin{DoxyParamCaption}\item[{imu\+\_\+comp}]{comp }\end{DoxyParamCaption})}
+
+Returns the z value of the component specified 
+\begin{DoxyParams}{Parameters}
+{\em comp} & is the component for which x value is needed. It can be \hyperlink{class_i_m_u}{I\+MU}, M\+AG or A\+C\+C\+EL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the z value of that component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_a252166103441e5b7ce10d123c9081505}\label{class_i_m_u_a252166103441e5b7ce10d123c9081505}} 
+\index{I\+MU@{I\+MU}!is\+Started@{is\+Started}}
+\index{is\+Started@{is\+Started}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{is\+Started()}{isStarted()}}
+{\footnotesize\ttfamily bool I\+M\+U\+::is\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns true if sensor is working and false otherwise \begin{DoxyReturn}{Returns}
+the status of sensor running 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_a728c6535b560edafe756982d12f06db0}\label{class_i_m_u_a728c6535b560edafe756982d12f06db0}} 
+\index{I\+MU@{I\+MU}!setup\+Accel@{setup\+Accel}}
+\index{setup\+Accel@{setup\+Accel}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{setup\+Accel()}{setupAccel()}}
+{\footnotesize\ttfamily void I\+M\+U\+::setup\+Accel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scale = {\ttfamily 8},  }\item[{uint8\+\_\+t}]{sample\+Rate = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Specifies the settings for the accelerometer 
+\begin{DoxyParams}{Parameters}
+{\em scale} & is the full-\/scale range of accelerometer. It can be set to either 2, 4, 8 or 16 \\
+\hline
+{\em sample\+Rate} & is the output data range of accelerometer. It can be set between 1 and 6 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_m_u_afcb732654cf42908c921456bf6b2a3fd}\label{class_i_m_u_afcb732654cf42908c921456bf6b2a3fd}} 
+\index{I\+MU@{I\+MU}!setup\+Gyro@{setup\+Gyro}}
+\index{setup\+Gyro@{setup\+Gyro}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{setup\+Gyro()}{setupGyro()}}
+{\footnotesize\ttfamily void I\+M\+U\+::setup\+Gyro (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scale = {\ttfamily 245},  }\item[{uint8\+\_\+t}]{sample\+Rate = {\ttfamily 3},  }\item[{uint8\+\_\+t}]{flipX = {\ttfamily (uint8\+\_\+t)false},  }\item[{uint8\+\_\+t}]{flipY = {\ttfamily (uint8\+\_\+t)false},  }\item[{uint8\+\_\+t}]{flipZ = {\ttfamily (uint8\+\_\+t)false} }\end{DoxyParamCaption})}
+
+Specifies the settings for the gyroscope 
+\begin{DoxyParams}{Parameters}
+{\em scale} & is the full-\/scale range of gyroscope. It can be set to either 245, 500, or 2000 \\
+\hline
+{\em sample\+Rate} & is the output data rate of gyro. It can be set between 1 and 6 \\
+\hline
+{\em flipX} & switches the positive/negative orientation of x axis \\
+\hline
+{\em flipY} & switches the positive/negative orientation of y axis \\
+\hline
+{\em flipZ} & switches the positive/negative orientation of z axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_m_u_ac3aaf3be5c6b61c2bd08f23d76946842}\label{class_i_m_u_ac3aaf3be5c6b61c2bd08f23d76946842}} 
+\index{I\+MU@{I\+MU}!setup\+Mag@{setup\+Mag}}
+\index{setup\+Mag@{setup\+Mag}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{setup\+Mag()}{setupMag()}}
+{\footnotesize\ttfamily void I\+M\+U\+::setup\+Mag (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scale = {\ttfamily 12},  }\item[{uint8\+\_\+t}]{sample\+Rate = {\ttfamily 5},  }\item[{uint8\+\_\+t}]{temp\+Comp = {\ttfamily (uint8\+\_\+t)false},  }\item[{uint8\+\_\+t}]{operating\+Mode = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Specifies the settings or the magnetometer 
+\begin{DoxyParams}{Parameters}
+{\em scale} & is the full scale range of magnetometer. It can be set to either 4, 8, 12 or 16 \\
+\hline
+{\em sample\+Rate} & is the output data rate of the magnetometer. It can be set between 0 and 7 \\
+\hline
+{\em temp\+Comp} & enables or disables temperature compensation of the magnetometer \\
+\hline
+{\em operating\+Mode} & sets the operating mode of magnetometer. It can be between 0 and 2 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_i_m_u_ad516a2a064d93e7fc630f470cc5e50e1}\label{class_i_m_u_ad516a2a064d93e7fc630f470cc5e50e1}} 
+\index{I\+MU@{I\+MU}!error\+\_\+val@{error\+\_\+val}}
+\index{error\+\_\+val@{error\+\_\+val}!I\+MU@{I\+MU}}
+\subsubsection{\texorpdfstring{error\+\_\+val}{error\_val}}
+{\footnotesize\ttfamily const float I\+M\+U\+::error\+\_\+val = -\/99999.\+00000\hspace{0.3cm}{\ttfamily [private]}}
+
+when a sensor does not have a value, this error value is given 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/git/waterloop\+\_\+projects/sensors/src/imu/I\+M\+U.\+h\item 
+D\+:/git/waterloop\+\_\+projects/sensors/src/imu/I\+M\+U.\+cpp\end{DoxyCompactItemize}

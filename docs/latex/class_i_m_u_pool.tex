@@ -1,0 +1,161 @@
+\hypertarget{class_i_m_u_pool}{}\section{I\+M\+U\+Pool Class Reference}
+\label{class_i_m_u_pool}\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+
+
+This class holds number of \hyperlink{class_i_m_u}{I\+MU} sensors\textquotesingle{} objects and handles data from all of them. It provides access to data in both J\+S\+ON and raw format.  
+
+
+
+
+{\ttfamily \#include $<$I\+M\+U\+Pool.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i_m_u_pool_ab3160066458f0c69b54b6f2fce31b0e5}{I\+M\+U\+Pool} (unsigned int num\+\_\+sensors)
+\item 
+\hyperlink{class_i_m_u_pool_ab7e6235773fc29b6f10a61ef8822fff3}{$\sim$\+I\+M\+U\+Pool} ()
+\item 
+bool \hyperlink{class_i_m_u_pool_a29487e0bed851336ec1b7682bdb3a8d2}{sensors\+Working} ()
+\item 
+void \hyperlink{class_i_m_u_pool_ae656ae411b188d1484c524dd42c6cbfa}{serial\+Print} (unsigned int sensor, imu\+\_\+comp component)
+\item 
+int \hyperlink{class_i_m_u_pool_a586d1f4afaea96029a546fd4154db362}{get\+Total} ()
+\item 
+float \hyperlink{class_i_m_u_pool_a36030cdecae6c63053565949615420f6}{getX} (unsigned int system, imu\+\_\+comp component)
+\item 
+float \hyperlink{class_i_m_u_pool_a8822803453deb8b844db19fec6aaad13}{getY} (unsigned int system, imu\+\_\+comp component)
+\item 
+float \hyperlink{class_i_m_u_pool_a2e0f9ce0c95bbe4d9bd11c4fa06987b2}{getZ} (unsigned int system, imu\+\_\+comp component)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_m_u_pool_a7e505fdd34d40659a0c27e39355dd614}\label{class_i_m_u_pool_a7e505fdd34d40659a0c27e39355dd614}} 
+const unsigned int {\bfseries sensor\+\_\+total}
+\item 
+\mbox{\Hypertarget{class_i_m_u_pool_aced7f83e4fe5cfd8bbfe97d3565f9c2c}\label{class_i_m_u_pool_aced7f83e4fe5cfd8bbfe97d3565f9c2c}} 
+\hyperlink{class_i_m_u}{I\+MU} $\ast$$\ast$ {\bfseries sensors}
+\item 
+\mbox{\Hypertarget{class_i_m_u_pool_a498fa27acbd1d4d60c9a21010c017b12}\label{class_i_m_u_pool_a498fa27acbd1d4d60c9a21010c017b12}} 
+\hyperlink{class_data_handler}{Data\+Handler} {\bfseries data\+\_\+handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class holds number of \hyperlink{class_i_m_u}{I\+MU} sensors\textquotesingle{} objects and handles data from all of them. It provides access to data in both J\+S\+ON and raw format. 
+
+\begin{DoxyAuthor}{Author}
+Deep Dhillon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017-\/05-\/27 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_m_u_pool_ab3160066458f0c69b54b6f2fce31b0e5}\label{class_i_m_u_pool_ab3160066458f0c69b54b6f2fce31b0e5}} 
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\subsubsection{\texorpdfstring{I\+M\+U\+Pool()}{IMUPool()}}
+{\footnotesize\ttfamily I\+M\+U\+Pool\+::\+I\+M\+U\+Pool (\begin{DoxyParamCaption}\item[{unsigned int}]{num\+\_\+sensors }\end{DoxyParamCaption})}
+
+Single constructor which creates multiple imus and initialize them 
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+sensors} & is the number of sensors to be created \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_m_u_pool_ab7e6235773fc29b6f10a61ef8822fff3}\label{class_i_m_u_pool_ab7e6235773fc29b6f10a61ef8822fff3}} 
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!````~I\+M\+U\+Pool@{$\sim$\+I\+M\+U\+Pool}}
+\index{````~I\+M\+U\+Pool@{$\sim$\+I\+M\+U\+Pool}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+M\+U\+Pool()}{~IMUPool()}}
+{\footnotesize\ttfamily I\+M\+U\+Pool\+::$\sim$\+I\+M\+U\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor deletes all the imu sensors and frees up memory 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_m_u_pool_a586d1f4afaea96029a546fd4154db362}\label{class_i_m_u_pool_a586d1f4afaea96029a546fd4154db362}} 
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!get\+Total@{get\+Total}}
+\index{get\+Total@{get\+Total}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\subsubsection{\texorpdfstring{get\+Total()}{getTotal()}}
+{\footnotesize\ttfamily int I\+M\+U\+Pool\+::get\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gives access to number of sensors being used \begin{DoxyReturn}{Returns}
+the number of sensors being used 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_pool_a36030cdecae6c63053565949615420f6}\label{class_i_m_u_pool_a36030cdecae6c63053565949615420f6}} 
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!getX@{getX}}
+\index{getX@{getX}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\subsubsection{\texorpdfstring{get\+X()}{getX()}}
+{\footnotesize\ttfamily float I\+M\+U\+Pool\+::getX (\begin{DoxyParamCaption}\item[{unsigned int}]{system,  }\item[{imu\+\_\+comp}]{component }\end{DoxyParamCaption})}
+
+Returns the x value of the component specified from the imu specified 
+\begin{DoxyParams}{Parameters}
+{\em system} & is the imu sensor from which data should be gathered \\
+\hline
+{\em component} & is the component for which x value is needed. It can be \hyperlink{class_i_m_u}{I\+MU}, M\+AG or A\+C\+C\+EL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the x value of that component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_pool_a8822803453deb8b844db19fec6aaad13}\label{class_i_m_u_pool_a8822803453deb8b844db19fec6aaad13}} 
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!getY@{getY}}
+\index{getY@{getY}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\subsubsection{\texorpdfstring{get\+Y()}{getY()}}
+{\footnotesize\ttfamily float I\+M\+U\+Pool\+::getY (\begin{DoxyParamCaption}\item[{unsigned int}]{system,  }\item[{imu\+\_\+comp}]{component }\end{DoxyParamCaption})}
+
+Returns the y value of the component specified from the imu specified 
+\begin{DoxyParams}{Parameters}
+{\em system} & is the imu sensor from which data should be gathered \\
+\hline
+{\em component} & is the component for which x value is needed. It can be \hyperlink{class_i_m_u}{I\+MU}, M\+AG or A\+C\+C\+EL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the y value of that component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_pool_a2e0f9ce0c95bbe4d9bd11c4fa06987b2}\label{class_i_m_u_pool_a2e0f9ce0c95bbe4d9bd11c4fa06987b2}} 
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!getZ@{getZ}}
+\index{getZ@{getZ}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\subsubsection{\texorpdfstring{get\+Z()}{getZ()}}
+{\footnotesize\ttfamily float I\+M\+U\+Pool\+::getZ (\begin{DoxyParamCaption}\item[{unsigned int}]{system,  }\item[{imu\+\_\+comp}]{component }\end{DoxyParamCaption})}
+
+Returns the z value of the component specified from the imu specified 
+\begin{DoxyParams}{Parameters}
+{\em system} & is the imu sensor from which data should be gathered \\
+\hline
+{\em component} & is the component for which x value is needed. It can be \hyperlink{class_i_m_u}{I\+MU}, M\+AG or A\+C\+C\+EL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the z value of that component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_pool_a29487e0bed851336ec1b7682bdb3a8d2}\label{class_i_m_u_pool_a29487e0bed851336ec1b7682bdb3a8d2}} 
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!sensors\+Working@{sensors\+Working}}
+\index{sensors\+Working@{sensors\+Working}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\subsubsection{\texorpdfstring{sensors\+Working()}{sensorsWorking()}}
+{\footnotesize\ttfamily bool I\+M\+U\+Pool\+::sensors\+Working (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns true if all sensors are working and false otherwise \begin{DoxyReturn}{Returns}
+the status of all the imus running 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_m_u_pool_ae656ae411b188d1484c524dd42c6cbfa}\label{class_i_m_u_pool_ae656ae411b188d1484c524dd42c6cbfa}} 
+\index{I\+M\+U\+Pool@{I\+M\+U\+Pool}!serial\+Print@{serial\+Print}}
+\index{serial\+Print@{serial\+Print}!I\+M\+U\+Pool@{I\+M\+U\+Pool}}
+\subsubsection{\texorpdfstring{serial\+Print()}{serialPrint()}}
+{\footnotesize\ttfamily void I\+M\+U\+Pool\+::serial\+Print (\begin{DoxyParamCaption}\item[{unsigned int}]{sensor,  }\item[{imu\+\_\+comp}]{component }\end{DoxyParamCaption})}
+
+Prints data to Serial of a particular component of a particular imu in J\+S\+ON format 
+\begin{DoxyParams}{Parameters}
+{\em sensor} & is the imu sensor from which data should be printed \\
+\hline
+{\em component} & is the component from that particular imu. It could be G\+Y\+RO, A\+C\+C\+EL or M\+AG \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/git/waterloop\+\_\+projects/sensors/src/imu/I\+M\+U\+Pool.\+h\item 
+D\+:/git/waterloop\+\_\+projects/sensors/src/imu/I\+M\+U\+Pool.\+cpp\end{DoxyCompactItemize}

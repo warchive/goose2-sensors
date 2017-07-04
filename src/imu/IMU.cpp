@@ -1,7 +1,3 @@
-//
-// Created by Deep on 2017-06-27.
-//
-
 #include "IMU.h"
 #include <Wire.h>
 

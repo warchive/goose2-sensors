@@ -1,11 +1,3 @@
-/*
- * IMUSubsystem.cpp
- *
- *  Created on: May 27, 2017
- *  Author: Deep
- *  Description: Implementation of IMU class
- */
-
 #include "IMUPool.h"
 
 IMUPool::IMUPool(unsigned int num_sensors) : sensor_total{num_sensors},

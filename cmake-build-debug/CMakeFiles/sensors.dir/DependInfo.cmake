@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/git/waterloop_projects/sensors/src/DocMain.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/DocMain.cpp.obj"
+  "D:/git/waterloop_projects/sensors/src/Temp/IRTemp.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/Temp/TMP36.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/color/ColorSensor.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj"
   "D:/git/waterloop_projects/sensors/src/color/Color_Sensor.cpp" "D:/git/waterloop_projects/sensors/cmake-build-debug/CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj"
@@ -29,11 +31,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/standard"
+  "../lib/DHT"
   "../lib/ArduinoJson/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"
   "../lib/SparkFunLSM9DS1/src"
   "../src"
+  "../lib/Adafruit_Sensor"
+  "../lib/SparkFun_MLX90614/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"
   "C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Servo/src"

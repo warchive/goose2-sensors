@@ -1,0 +1,101 @@
+\hypertarget{class_t_m_p36}{}\section{T\+M\+P36 Class Reference}
+\label{class_t_m_p36}\index{T\+M\+P36@{T\+M\+P36}}
+
+
+This class provides library to measure temperature based on \hyperlink{class_t_m_p36}{T\+M\+P36} temperature sensor.  
+
+
+
+
+{\ttfamily \#include $<$T\+M\+P36.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_m_p36_a8973c298cb40084aed715a404423a214}{T\+M\+P36} (const String \hyperlink{class_t_m_p36_a515e4a254610bcc0581200f4c37f8309}{name}, const uint8\+\_\+t \hyperlink{class_t_m_p36_abbe6b02af520ddf052d7a23930174365}{io\+\_\+pin})
+\item 
+void \hyperlink{class_t_m_p36_a7e09f2c40c8cbcb80ab6333480277611}{serial\+Print} ()
+\item 
+float \hyperlink{class_t_m_p36_aeb884c6c65eb7fdaff09af9adbbb919c}{get\+Temp} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const String \hyperlink{class_t_m_p36_a515e4a254610bcc0581200f4c37f8309}{name}
+\item 
+const uint8\+\_\+t \hyperlink{class_t_m_p36_abbe6b02af520ddf052d7a23930174365}{io\+\_\+pin}
+\item 
+\hyperlink{class_data_handler}{Data\+Handler} \hyperlink{class_t_m_p36_a452d439e40c40c24b41b49ae573e7b1e}{handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides library to measure temperature based on \hyperlink{class_t_m_p36}{T\+M\+P36} temperature sensor. 
+
+\begin{DoxyAuthor}{Author}
+Deep Dhillon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017-\/06-\/28 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_m_p36_a8973c298cb40084aed715a404423a214}\label{class_t_m_p36_a8973c298cb40084aed715a404423a214}} 
+\index{T\+M\+P36@{T\+M\+P36}!T\+M\+P36@{T\+M\+P36}}
+\index{T\+M\+P36@{T\+M\+P36}!T\+M\+P36@{T\+M\+P36}}
+\subsubsection{\texorpdfstring{T\+M\+P36()}{TMP36()}}
+{\footnotesize\ttfamily T\+M\+P36\+::\+T\+M\+P36 (\begin{DoxyParamCaption}\item[{const String}]{name,  }\item[{const uint8\+\_\+t}]{io\+\_\+pin }\end{DoxyParamCaption})}
+
+Single constructor initializes the sensor and setups an analog connection 
+\begin{DoxyParams}{Parameters}
+{\em name} & is the name of the sensor \\
+\hline
+{\em io\+\_\+pin} & is the pin this sensor is attached too \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_m_p36_aeb884c6c65eb7fdaff09af9adbbb919c}\label{class_t_m_p36_aeb884c6c65eb7fdaff09af9adbbb919c}} 
+\index{T\+M\+P36@{T\+M\+P36}!get\+Temp@{get\+Temp}}
+\index{get\+Temp@{get\+Temp}!T\+M\+P36@{T\+M\+P36}}
+\subsubsection{\texorpdfstring{get\+Temp()}{getTemp()}}
+{\footnotesize\ttfamily float T\+M\+P36\+::get\+Temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gives access to temperature \begin{DoxyReturn}{Returns}
+the updated temperature 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_m_p36_a7e09f2c40c8cbcb80ab6333480277611}\label{class_t_m_p36_a7e09f2c40c8cbcb80ab6333480277611}} 
+\index{T\+M\+P36@{T\+M\+P36}!serial\+Print@{serial\+Print}}
+\index{serial\+Print@{serial\+Print}!T\+M\+P36@{T\+M\+P36}}
+\subsubsection{\texorpdfstring{serial\+Print()}{serialPrint()}}
+{\footnotesize\ttfamily void T\+M\+P36\+::serial\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints temperature data to the Serial 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_m_p36_a452d439e40c40c24b41b49ae573e7b1e}\label{class_t_m_p36_a452d439e40c40c24b41b49ae573e7b1e}} 
+\index{T\+M\+P36@{T\+M\+P36}!handler@{handler}}
+\index{handler@{handler}!T\+M\+P36@{T\+M\+P36}}
+\subsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily \hyperlink{class_data_handler}{Data\+Handler} T\+M\+P36\+::handler\hspace{0.3cm}{\ttfamily [private]}}
+
+data handler being used \mbox{\Hypertarget{class_t_m_p36_abbe6b02af520ddf052d7a23930174365}\label{class_t_m_p36_abbe6b02af520ddf052d7a23930174365}} 
+\index{T\+M\+P36@{T\+M\+P36}!io\+\_\+pin@{io\+\_\+pin}}
+\index{io\+\_\+pin@{io\+\_\+pin}!T\+M\+P36@{T\+M\+P36}}
+\subsubsection{\texorpdfstring{io\+\_\+pin}{io\_pin}}
+{\footnotesize\ttfamily const uint8\+\_\+t T\+M\+P36\+::io\+\_\+pin\hspace{0.3cm}{\ttfamily [private]}}
+
+pin the sensor is attached too \mbox{\Hypertarget{class_t_m_p36_a515e4a254610bcc0581200f4c37f8309}\label{class_t_m_p36_a515e4a254610bcc0581200f4c37f8309}} 
+\index{T\+M\+P36@{T\+M\+P36}!name@{name}}
+\index{name@{name}!T\+M\+P36@{T\+M\+P36}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily const String T\+M\+P36\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+name of the sensor 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/git/waterloop\+\_\+projects/sensors/src/\+Temp/T\+M\+P36.\+h\item 
+D\+:/git/waterloop\+\_\+projects/sensors/src/\+Temp/T\+M\+P36.\+cpp\end{DoxyCompactItemize}

@@ -29,9 +29,9 @@ def calcLinearVelocity(ACCELArray):
         yVel = []
         zVel = []
         for count in range(size):
-            x.append(ACCELArray[count]["data"][0])
-            y.append(ACCELArray[count]["data"][1])
-            z.append(ACCELArray[count]["data"][2])
+            x.append(ACCELArray[count]["data"][0]*9.80665)
+            y.append(ACCELArray[count]["data"][1]*9.80665)
+            z.append(ACCELArray[count]["data"][2]*9.80665)
             t.append(ACCELArray[count]["time"])
 
         LowerBound = 0
@@ -89,7 +89,8 @@ def calcAngularVelocity(ACCELArray, GYROArray):
         returnArray["xAngVelocity"] = xVel
         returnArray["yAngVelocity"] = yVel
         returnArray["zAngVelocity"] = zVel
-
+        plt.plot(t[2:], xVel, 'r', t[2:], yVel, 'b', t[2:], zVel, 'g', lw=2)
+        plt.show()
         print(returnArray)
         return returnArray
     # loop through the velocity arrays and divide by radian
@@ -126,9 +127,7 @@ def calcLinearDisplacement(ACCELArray):
     retval["zDisplacement"] = zDisp
     retval["times"] = times
     return retval
-#
-#
-#
+
 def calcAngularDisplacement(ACCELArray, GYROArray):
     displacement = calcLinearDisplacement(ACCELArray)
     xDisp = displacement["xDisplacement"]
@@ -166,9 +165,34 @@ def calcAngularDisplacement(ACCELArray, GYROArray):
         print(returnArray)
         return returnArray
 
-DemoData = []
-for i in range(50):
-    i += 1
-    DemoData.append({"time": i, "sensor": "accelerometer", "data": [np.random.uniform(0, i), np.random.chisquare(i), np.random.binomial(50, (float)(i/(i+1)))]})
 
-calcLinearDisplacement(SVR.SVR_process_monotype(DemoData))
+def Optical(arrData):
+    count = len(arrData)
+    Displacement = []
+    Time = []
+    Velocity = []
+    for i in range(count):
+        Displacement.append(arrData["data"][0])
+        Time.append(arrData["time"])
+        if i == 0:
+            Velocity.append(0)
+        else:
+            Velocity.append((float)((Displacement[i]-Displacement[i-1])/(Time[i]-Time[i-1])))
+    return
+
+
+
+# DemoData = []
+# for i in range(50):
+#     i += 1
+#     DemoData.append({"time": i, "sensor": "accelerometer", "data": [np.random.uniform(0, i), np.random.chisquare(i), np.random.binomial(50, (float)(i/(i+1)))]})
+# #
+# # DemoData2 = []
+# # for i in range(50):
+# #     i += 1
+# #     DemoData.append({"time": i, "sensor": "gyro", "data": [np.random.uniform(0, i), np.random.chisquare(i), np.random.binomial(50, (float)(i/(i+1)))]})
+# #
+#
+# calcLinearDisplacement(SVR.SVR_process_monotype(DemoData))
+
+# calcAngularVelocity(SVR.SVR_process_monotype(DemoData), SVR.SVR_process_monotype(DemoData2))

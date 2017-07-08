@@ -2,6 +2,7 @@
 #define COLOR_SENSOR_H
 
 #include <shared/DataHandler.h>
+#include <WSerial.h>
 
 class ColorSensor{
     DataHandler data_handler;
@@ -9,6 +10,8 @@ class ColorSensor{
     const uint8_t out1APin = 0;
     const uint8_t out2APin = 1;
     const uint8_t out3APin = 2;
+
+    WSerial serial;
 
 public:
     uint8_t getLimitOut1();

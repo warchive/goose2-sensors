@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj"
   "CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj"
   "CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj"
-  "CMakeFiles/sensors.dir/src/imu/main.cpp.obj"
   "CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj"
   "CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj"
   "sensors.pdb"

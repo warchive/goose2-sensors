@@ -415,33 +415,6 @@ src/imu/IMUPool.cpp.s:
 	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.s
 .PHONY : src/imu/IMUPool.cpp.s
 
-src/imu/main.obj: src/imu/main.cpp.obj
-
-.PHONY : src/imu/main.obj
-
-# target to build an object file
-src/imu/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/main.cpp.obj
-.PHONY : src/imu/main.cpp.obj
-
-src/imu/main.i: src/imu/main.cpp.i
-
-.PHONY : src/imu/main.i
-
-# target to preprocess a source file
-src/imu/main.cpp.i:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/main.cpp.i
-.PHONY : src/imu/main.cpp.i
-
-src/imu/main.s: src/imu/main.cpp.s
-
-.PHONY : src/imu/main.s
-
-# target to generate assembly for a file
-src/imu/main.cpp.s:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/main.cpp.s
-.PHONY : src/imu/main.cpp.s
-
 src/lev/Lev.obj: src/lev/Lev.cpp.obj
 
 .PHONY : src/lev/Lev.obj
@@ -534,9 +507,6 @@ help:
 	@echo ... src/imu/IMUPool.obj
 	@echo ... src/imu/IMUPool.i
 	@echo ... src/imu/IMUPool.s
-	@echo ... src/imu/main.obj
-	@echo ... src/imu/main.i
-	@echo ... src/imu/main.s
 	@echo ... src/lev/Lev.obj
 	@echo ... src/lev/Lev.i
 	@echo ... src/lev/Lev.s

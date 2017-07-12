@@ -15,6 +15,6 @@ The values recorded for each Out range from 0 - 1023 but the code implemented re
 The data sent to the dashboard is the color range value from 0 to 7.
 
 **Expected JSON returned:**
-```C++
+```cpp
 {"time":1009,"sensor":"Color","data":[2]}
 ```

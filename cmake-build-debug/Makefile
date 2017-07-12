@@ -280,6 +280,33 @@ src/Temp/IRTemp.cpp.s:
 	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.s
 .PHONY : src/Temp/IRTemp.cpp.s
 
+src/Temp/LM35.obj: src/Temp/LM35.cpp.obj
+
+.PHONY : src/Temp/LM35.obj
+
+# target to build an object file
+src/Temp/LM35.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj
+.PHONY : src/Temp/LM35.cpp.obj
+
+src/Temp/LM35.i: src/Temp/LM35.cpp.i
+
+.PHONY : src/Temp/LM35.i
+
+# target to preprocess a source file
+src/Temp/LM35.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Temp/LM35.cpp.i
+.PHONY : src/Temp/LM35.cpp.i
+
+src/Temp/LM35.s: src/Temp/LM35.cpp.s
+
+.PHONY : src/Temp/LM35.s
+
+# target to generate assembly for a file
+src/Temp/LM35.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Temp/LM35.cpp.s
+.PHONY : src/Temp/LM35.cpp.s
+
 src/Temp/TMP36.obj: src/Temp/TMP36.cpp.obj
 
 .PHONY : src/Temp/TMP36.obj
@@ -334,86 +361,140 @@ src/color/ColorSensor.cpp.s:
 	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.s
 .PHONY : src/color/ColorSensor.cpp.s
 
-src/color/Color_Sensor.obj: src/color/Color_Sensor.cpp.obj
+src/imu/Accel.obj: src/imu/Accel.cpp.obj
 
-.PHONY : src/color/Color_Sensor.obj
-
-# target to build an object file
-src/color/Color_Sensor.cpp.obj:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj
-.PHONY : src/color/Color_Sensor.cpp.obj
-
-src/color/Color_Sensor.i: src/color/Color_Sensor.cpp.i
-
-.PHONY : src/color/Color_Sensor.i
-
-# target to preprocess a source file
-src/color/Color_Sensor.cpp.i:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.i
-.PHONY : src/color/Color_Sensor.cpp.i
-
-src/color/Color_Sensor.s: src/color/Color_Sensor.cpp.s
-
-.PHONY : src/color/Color_Sensor.s
-
-# target to generate assembly for a file
-src/color/Color_Sensor.cpp.s:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.s
-.PHONY : src/color/Color_Sensor.cpp.s
-
-src/imu/IMU.obj: src/imu/IMU.cpp.obj
-
-.PHONY : src/imu/IMU.obj
+.PHONY : src/imu/Accel.obj
 
 # target to build an object file
-src/imu/IMU.cpp.obj:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj
-.PHONY : src/imu/IMU.cpp.obj
+src/imu/Accel.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj
+.PHONY : src/imu/Accel.cpp.obj
 
-src/imu/IMU.i: src/imu/IMU.cpp.i
+src/imu/Accel.i: src/imu/Accel.cpp.i
 
-.PHONY : src/imu/IMU.i
+.PHONY : src/imu/Accel.i
 
 # target to preprocess a source file
-src/imu/IMU.cpp.i:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMU.cpp.i
-.PHONY : src/imu/IMU.cpp.i
+src/imu/Accel.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Accel.cpp.i
+.PHONY : src/imu/Accel.cpp.i
 
-src/imu/IMU.s: src/imu/IMU.cpp.s
+src/imu/Accel.s: src/imu/Accel.cpp.s
 
-.PHONY : src/imu/IMU.s
+.PHONY : src/imu/Accel.s
 
 # target to generate assembly for a file
-src/imu/IMU.cpp.s:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMU.cpp.s
-.PHONY : src/imu/IMU.cpp.s
+src/imu/Accel.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Accel.cpp.s
+.PHONY : src/imu/Accel.cpp.s
 
-src/imu/IMUPool.obj: src/imu/IMUPool.cpp.obj
+src/imu/Gyro.obj: src/imu/Gyro.cpp.obj
 
-.PHONY : src/imu/IMUPool.obj
+.PHONY : src/imu/Gyro.obj
 
 # target to build an object file
-src/imu/IMUPool.cpp.obj:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj
-.PHONY : src/imu/IMUPool.cpp.obj
+src/imu/Gyro.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj
+.PHONY : src/imu/Gyro.cpp.obj
 
-src/imu/IMUPool.i: src/imu/IMUPool.cpp.i
+src/imu/Gyro.i: src/imu/Gyro.cpp.i
 
-.PHONY : src/imu/IMUPool.i
+.PHONY : src/imu/Gyro.i
 
 # target to preprocess a source file
-src/imu/IMUPool.cpp.i:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.i
-.PHONY : src/imu/IMUPool.cpp.i
+src/imu/Gyro.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Gyro.cpp.i
+.PHONY : src/imu/Gyro.cpp.i
 
-src/imu/IMUPool.s: src/imu/IMUPool.cpp.s
+src/imu/Gyro.s: src/imu/Gyro.cpp.s
 
-.PHONY : src/imu/IMUPool.s
+.PHONY : src/imu/Gyro.s
 
 # target to generate assembly for a file
-src/imu/IMUPool.cpp.s:
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.s
-.PHONY : src/imu/IMUPool.cpp.s
+src/imu/Gyro.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Gyro.cpp.s
+.PHONY : src/imu/Gyro.cpp.s
+
+src/imu/Mag.obj: src/imu/Mag.cpp.obj
+
+.PHONY : src/imu/Mag.obj
+
+# target to build an object file
+src/imu/Mag.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj
+.PHONY : src/imu/Mag.cpp.obj
+
+src/imu/Mag.i: src/imu/Mag.cpp.i
+
+.PHONY : src/imu/Mag.i
+
+# target to preprocess a source file
+src/imu/Mag.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Mag.cpp.i
+.PHONY : src/imu/Mag.cpp.i
+
+src/imu/Mag.s: src/imu/Mag.cpp.s
+
+.PHONY : src/imu/Mag.s
+
+# target to generate assembly for a file
+src/imu/Mag.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Mag.cpp.s
+.PHONY : src/imu/Mag.cpp.s
+
+src/imu/SparkfunIMU.obj: src/imu/SparkfunIMU.cpp.obj
+
+.PHONY : src/imu/SparkfunIMU.obj
+
+# target to build an object file
+src/imu/SparkfunIMU.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj
+.PHONY : src/imu/SparkfunIMU.cpp.obj
+
+src/imu/SparkfunIMU.i: src/imu/SparkfunIMU.cpp.i
+
+.PHONY : src/imu/SparkfunIMU.i
+
+# target to preprocess a source file
+src/imu/SparkfunIMU.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.i
+.PHONY : src/imu/SparkfunIMU.cpp.i
+
+src/imu/SparkfunIMU.s: src/imu/SparkfunIMU.cpp.s
+
+.PHONY : src/imu/SparkfunIMU.s
+
+# target to generate assembly for a file
+src/imu/SparkfunIMU.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.s
+.PHONY : src/imu/SparkfunIMU.cpp.s
+
+src/lev/DPRSensor.obj: src/lev/DPRSensor.cpp.obj
+
+.PHONY : src/lev/DPRSensor.obj
+
+# target to build an object file
+src/lev/DPRSensor.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj
+.PHONY : src/lev/DPRSensor.cpp.obj
+
+src/lev/DPRSensor.i: src/lev/DPRSensor.cpp.i
+
+.PHONY : src/lev/DPRSensor.i
+
+# target to preprocess a source file
+src/lev/DPRSensor.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.i
+.PHONY : src/lev/DPRSensor.cpp.i
+
+src/lev/DPRSensor.s: src/lev/DPRSensor.cpp.s
+
+.PHONY : src/lev/DPRSensor.s
+
+# target to generate assembly for a file
+src/lev/DPRSensor.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.s
+.PHONY : src/lev/DPRSensor.cpp.s
 
 src/lev/Lev.obj: src/lev/Lev.cpp.obj
 
@@ -442,6 +523,87 @@ src/lev/Lev.cpp.s:
 	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/Lev.cpp.s
 .PHONY : src/lev/Lev.cpp.s
 
+src/lev/LowPressure.obj: src/lev/LowPressure.cpp.obj
+
+.PHONY : src/lev/LowPressure.obj
+
+# target to build an object file
+src/lev/LowPressure.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj
+.PHONY : src/lev/LowPressure.cpp.obj
+
+src/lev/LowPressure.i: src/lev/LowPressure.cpp.i
+
+.PHONY : src/lev/LowPressure.i
+
+# target to preprocess a source file
+src/lev/LowPressure.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.i
+.PHONY : src/lev/LowPressure.cpp.i
+
+src/lev/LowPressure.s: src/lev/LowPressure.cpp.s
+
+.PHONY : src/lev/LowPressure.s
+
+# target to generate assembly for a file
+src/lev/LowPressure.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.s
+.PHONY : src/lev/LowPressure.cpp.s
+
+src/lev/Photoelectric.obj: src/lev/Photoelectric.cpp.obj
+
+.PHONY : src/lev/Photoelectric.obj
+
+# target to build an object file
+src/lev/Photoelectric.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj
+.PHONY : src/lev/Photoelectric.cpp.obj
+
+src/lev/Photoelectric.i: src/lev/Photoelectric.cpp.i
+
+.PHONY : src/lev/Photoelectric.i
+
+# target to preprocess a source file
+src/lev/Photoelectric.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.i
+.PHONY : src/lev/Photoelectric.cpp.i
+
+src/lev/Photoelectric.s: src/lev/Photoelectric.cpp.s
+
+.PHONY : src/lev/Photoelectric.s
+
+# target to generate assembly for a file
+src/lev/Photoelectric.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.s
+.PHONY : src/lev/Photoelectric.cpp.s
+
+src/main.obj: src/main.cpp.obj
+
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 src/shared/DataHandler.obj: src/shared/DataHandler.cpp.obj
 
 .PHONY : src/shared/DataHandler.obj
@@ -469,6 +631,60 @@ src/shared/DataHandler.cpp.s:
 	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.s
 .PHONY : src/shared/DataHandler.cpp.s
 
+src/shared/Sensor.obj: src/shared/Sensor.cpp.obj
+
+.PHONY : src/shared/Sensor.obj
+
+# target to build an object file
+src/shared/Sensor.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj
+.PHONY : src/shared/Sensor.cpp.obj
+
+src/shared/Sensor.i: src/shared/Sensor.cpp.i
+
+.PHONY : src/shared/Sensor.i
+
+# target to preprocess a source file
+src/shared/Sensor.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/Sensor.cpp.i
+.PHONY : src/shared/Sensor.cpp.i
+
+src/shared/Sensor.s: src/shared/Sensor.cpp.s
+
+.PHONY : src/shared/Sensor.s
+
+# target to generate assembly for a file
+src/shared/Sensor.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/Sensor.cpp.s
+.PHONY : src/shared/Sensor.cpp.s
+
+src/shared/SensorPool.obj: src/shared/SensorPool.cpp.obj
+
+.PHONY : src/shared/SensorPool.obj
+
+# target to build an object file
+src/shared/SensorPool.cpp.obj:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj
+.PHONY : src/shared/SensorPool.cpp.obj
+
+src/shared/SensorPool.i: src/shared/SensorPool.cpp.i
+
+.PHONY : src/shared/SensorPool.i
+
+# target to preprocess a source file
+src/shared/SensorPool.cpp.i:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.i
+.PHONY : src/shared/SensorPool.cpp.i
+
+src/shared/SensorPool.s: src/shared/SensorPool.cpp.s
+
+.PHONY : src/shared/SensorPool.s
+
+# target to generate assembly for a file
+src/shared/SensorPool.cpp.s:
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.s
+.PHONY : src/shared/SensorPool.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -492,27 +708,51 @@ help:
 	@echo ... src/Temp/IRTemp.obj
 	@echo ... src/Temp/IRTemp.i
 	@echo ... src/Temp/IRTemp.s
+	@echo ... src/Temp/LM35.obj
+	@echo ... src/Temp/LM35.i
+	@echo ... src/Temp/LM35.s
 	@echo ... src/Temp/TMP36.obj
 	@echo ... src/Temp/TMP36.i
 	@echo ... src/Temp/TMP36.s
 	@echo ... src/color/ColorSensor.obj
 	@echo ... src/color/ColorSensor.i
 	@echo ... src/color/ColorSensor.s
-	@echo ... src/color/Color_Sensor.obj
-	@echo ... src/color/Color_Sensor.i
-	@echo ... src/color/Color_Sensor.s
-	@echo ... src/imu/IMU.obj
-	@echo ... src/imu/IMU.i
-	@echo ... src/imu/IMU.s
-	@echo ... src/imu/IMUPool.obj
-	@echo ... src/imu/IMUPool.i
-	@echo ... src/imu/IMUPool.s
+	@echo ... src/imu/Accel.obj
+	@echo ... src/imu/Accel.i
+	@echo ... src/imu/Accel.s
+	@echo ... src/imu/Gyro.obj
+	@echo ... src/imu/Gyro.i
+	@echo ... src/imu/Gyro.s
+	@echo ... src/imu/Mag.obj
+	@echo ... src/imu/Mag.i
+	@echo ... src/imu/Mag.s
+	@echo ... src/imu/SparkfunIMU.obj
+	@echo ... src/imu/SparkfunIMU.i
+	@echo ... src/imu/SparkfunIMU.s
+	@echo ... src/lev/DPRSensor.obj
+	@echo ... src/lev/DPRSensor.i
+	@echo ... src/lev/DPRSensor.s
 	@echo ... src/lev/Lev.obj
 	@echo ... src/lev/Lev.i
 	@echo ... src/lev/Lev.s
+	@echo ... src/lev/LowPressure.obj
+	@echo ... src/lev/LowPressure.i
+	@echo ... src/lev/LowPressure.s
+	@echo ... src/lev/Photoelectric.obj
+	@echo ... src/lev/Photoelectric.i
+	@echo ... src/lev/Photoelectric.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 	@echo ... src/shared/DataHandler.obj
 	@echo ... src/shared/DataHandler.i
 	@echo ... src/shared/DataHandler.s
+	@echo ... src/shared/Sensor.obj
+	@echo ... src/shared/Sensor.i
+	@echo ... src/shared/Sensor.s
+	@echo ... src/shared/SensorPool.obj
+	@echo ... src/shared/SensorPool.i
+	@echo ... src/shared/SensorPool.s
 .PHONY : help
 
 

@@ -112,13 +112,14 @@
 					<Add option="-D__AVR_ATmega328P__"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/standard"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/StandardCplusplus"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/ArduinoJson/src"/>
-					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/Serial"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
+					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/SparkFunLSM9DS1/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/DHT"/>
-					<Add directory="D:/git/waterloop_projects/sensors/lib/Serial"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Servo/src"/>
@@ -179,13 +180,14 @@
 					<Add option="-D__AVR_ATmega328P__"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/cores/arduino"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/variants/standard"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/StandardCplusplus"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/ArduinoJson/src"/>
-					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
+					<Add directory="D:/git/waterloop_projects/sensors/lib/Serial"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src"/>
+					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/SparkFunLSM9DS1/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/src"/>
 					<Add directory="D:/git/waterloop_projects/sensors/lib/DHT"/>
-					<Add directory="D:/git/waterloop_projects/sensors/lib/Serial"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI1/src"/>
 					<Add directory="C:/Users/Deep6/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Servo/src"/>
@@ -261,6 +263,12 @@
 		<Unit filename="D:/git/waterloop_projects/sensors/src/Temp/IRTemp.h">
 			<Option target="sensors"/>
 		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/Temp/LM35.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/Temp/LM35.h">
+			<Option target="sensors"/>
+		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/Temp/TMP36.cpp">
 			<Option target="sensors"/>
 		</Unit>
@@ -273,25 +281,37 @@
 		<Unit filename="D:/git/waterloop_projects/sensors/src/color/ColorSensor.h">
 			<Option target="sensors"/>
 		</Unit>
-		<Unit filename="D:/git/waterloop_projects/sensors/src/color/Color_Sensor.cpp">
-			<Option target="sensors"/>
-		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/color/colorSensor_README.md">
 			<Option target="sensors"/>
 		</Unit>
-		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/IMU.cpp">
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/Accel.cpp">
 			<Option target="sensors"/>
 		</Unit>
-		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/IMU.h">
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/Accel.h">
 			<Option target="sensors"/>
 		</Unit>
-		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/IMUPool.cpp">
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/Gyro.cpp">
 			<Option target="sensors"/>
 		</Unit>
-		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/IMUPool.h">
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/Gyro.h">
 			<Option target="sensors"/>
 		</Unit>
-		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/IMU_README.md">
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/Mag.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/Mag.h">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/SparkfunIMU.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/imu/SparkfunIMU.h">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/lev/DPRSensor.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/lev/DPRSensor.h">
 			<Option target="sensors"/>
 		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/lev/LEV_README.md">
@@ -301,6 +321,21 @@
 			<Option target="sensors"/>
 		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/lev/Lev.h">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/lev/LowPressure.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/lev/LowPressure.h">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/lev/Photoelectric.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/lev/Photoelectric.h">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/main.cpp">
 			<Option target="sensors"/>
 		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/scripts/FakeData.csv">
@@ -349,6 +384,18 @@
 			<Option target="sensors"/>
 		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/src/shared/DataHandler.h">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/shared/Sensor.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/shared/Sensor.h">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/shared/SensorPool.cpp">
+			<Option target="sensors"/>
+		</Unit>
+		<Unit filename="D:/git/waterloop_projects/sensors/src/shared/SensorPool.h">
 			<Option target="sensors"/>
 		</Unit>
 		<Unit filename="D:/git/waterloop_projects/sensors/CMakeLists.txt">

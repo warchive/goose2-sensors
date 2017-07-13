@@ -26,8 +26,9 @@ python:
 sudo: false
 cache:
     directories:
-        - "~/.platformio"
-        - $HOME/.cache/pip
+        - ~/.platformio
+        - ~/.cache/pip
+        - .piolibdeps
 
 env:
     - PLATFORMIO_CI_SRC=test

@@ -2,7 +2,7 @@
 // Created by Clive on 7/13/2017.
 //
 
-#ifndef UNIT_TEST
+#ifdef UNIT_TEST
 
 #include <unity.h>
 #include <Arduino.h>
@@ -40,3 +40,5 @@ int main(){
         RUN_TEST(test_ErrorCorrection_random_errors);
     UNITY_END();
 }
+
+#endif //UNIT_TEST

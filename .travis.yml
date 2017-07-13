@@ -27,12 +27,14 @@ sudo: false
 cache:
     directories:
         - "~/.platformio"
+        - $HOME/.cache/pip
 
 env:
     - PLATFORMIO_CI_SRC=test
 
 install:
     - pip install -U platformio
+    - platformio init --ide=clion --board=megaatmega2560
 
 script:
     - platformio ci --lib="." --board=uno --board=megaatmega2560

@@ -37,4 +37,4 @@ install:
     - platformio init --ide=clion --board=megaatmega2560
 
 script:
-    - platformio ci --lib="." --board=uno --board=megaatmega2560
+    - platformio ci --lib="." --project-conf platformio.ini

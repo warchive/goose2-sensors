@@ -1,24 +1,23 @@
 #ifndef COLOR_SENSOR_H
 #define COLOR_SENSOR_H
 
-#include <shared/DataHandler.h>
-#include <WSerial.h>
+#include <shared/Sensor.h>
 
-class ColorSensor{
-    DataHandler data_handler;
+class ColorSensor : public Sensor{
+    const uint8_t out1Pin;
+    const uint8_t out2Pin;
+    const uint8_t out3Pin;
 
-    const uint8_t out1APin = 0;
-    const uint8_t out2APin = 1;
-    const uint8_t out3APin = 2;
-
-    WSerial serial;
+    // limit() restricts the value to 0 and based on the bound
+    uint8_t limit(const int value, const int bound);
 
 public:
-    uint8_t getLimitOut1();
-    uint8_t getLimitOut2();
-    uint8_t getLimitOut3();
-    void serialPrint();
-    uint8_t getColorRange();
+    ColorSensor(const String name, const uint8_t ou1Pin,
+                const uint8_t out2Pin, const uint8_t out3Pin);
+    uint8_t getOut1();
+    uint8_t getOut2();
+    uint8_t getOut3();
+    float read();
 };
 
 #endif

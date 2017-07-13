@@ -1,55 +1,54 @@
 #include "ColorSensor.h"
 
+ColorSensor::ColorSensor(const String name, const uint8_t ou1Pin,
+                         const uint8_t out2Pin, const uint8_t out3Pin)
+        : Sensor{name, 60, 1}, out1Pin{ou1Pin}, out2Pin{out2Pin}, out3Pin{out3Pin} {}
 
-// limit() restricts the value to 0 and based on the bound
-uint8_t limit(const int value, const int bound){
+
+uint8_t ColorSensor::limit(const int value, const int bound) {
     if (value >= bound) return 1;
     else return 0;
 }
 
 
-uint8_t ColorSensor::getLimitOut1() {
+uint8_t ColorSensor::getOut1() {
     //Limiting outputs to 0 & 1, instead of 0 - 1023
-    return limit(analogRead(out1APin), 1000);
+    return limit(analogRead(out1Pin), 1000);
 }
 
 
-uint8_t ColorSensor::getLimitOut2() {
+uint8_t ColorSensor::getOut2() {
     //Limiting outputs to 0 & 1, instead of 0 - 1023
-    return limit(analogRead(out2APin), 1000);
+    return limit(analogRead(out2Pin), 1000);
 }
 
 
-uint8_t ColorSensor::getLimitOut3() {
+uint8_t ColorSensor::getOut3() {
     //Limiting outputs to 0 & 1, instead of 0 - 1023
-    return limit(analogRead(out3APin), 1000);
+    return limit(analogRead(out3Pin), 1000);
 }
 
 
-uint8_t ColorSensor::getColorRange() {
-    uint8_t out1 = getLimitOut1();
-    uint8_t out2 = getLimitOut2();
-    uint8_t out3 = getLimitOut3();
+float ColorSensor::read() {
+    uint8_t out1 = getOut1();
+    uint8_t out2 = getOut2();
+    uint8_t out3 = getOut3();
 
-    if (out1 == 0 && out2 == 0 && out3 == 0) return 0;          // 0 is background (black, dark_blue)
-    else if (out3 == 0 && out2 == 0 && out1 == 1) return 1;     // 1 is Red, brown, pinkish-red, orange
-    else if (out3 == 0 && out2 == 1 && out1 == 0) return 2;     // 2 is Yellow, orange
-    else if (out3 == 0 && out2 == 1 && out1 == 1) return 3;
-    else if (out3 == 1 && out2 == 0 && out1 == 0) return 4;     // 4 is White,
-                                                                // green_tape_in_bay (out 2 flickers sometimes),
-                                                                // light_blue,
-    else if (out3 == 1 && out2 == 0 && out1 == 1) return 5;
-    else if (out3 == 1 && out2 == 1 && out1 == 0) return 6;
-    else if (out3 == 1 && out2 == 1 && out1 == 1) return 7;
-}
+    // 0 is background (black, dark_blue)
+    if (out1 == 0 && out2 == 0 && out3 == 0) add(0);
 
+    // 1 is Red, brown, pinkish-red, orange
+    else if (out3 == 0 && out2 == 0 && out1 == 1) add(1);
 
-void ColorSensor::serialPrint() {
-    float *data = new float[1];
+    // 2 is Yellow, orange
+    else if (out3 == 0 && out2 == 1 && out1 == 0) add(2);
+    else if (out3 == 0 && out2 == 1 && out1 == 1) add(3);
 
-    data[0] = getColorRange();
+    // 4 is White,
+    else if (out3 == 1 && out2 == 0 && out1 == 0) add(4);
+    else if (out3 == 1 && out2 == 0 && out1 == 1) add(5);
+    else if (out3 == 1 && out2 == 1 && out1 == 0) add(6);
+    else if (out3 == 1 && out2 == 1 && out1 == 1) add(7);
 
-    serial << data_handler.getJSONString("color", data, 1) << endl;
-
-    delete [] data;
+    return get(0);
 }

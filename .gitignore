@@ -1,9 +1,7 @@
 .pioenvs
 .piolibdeps
 CMakeListsPrivate.txt
-src/imu/main.cpp
-.pioenvs
-.piolibdeps
+src/main.cpp
 *.make
 .idea
 main.cpp

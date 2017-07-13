@@ -106,10 +106,35 @@ CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.obj.provides: CMakeFiles/sensors.dir/
 CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.obj
 
 
+CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj: ../src/Temp/LM35.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\Temp\LM35.cpp.obj -c D:\git\waterloop_projects\sensors\src\Temp\LM35.cpp
+
+CMakeFiles/sensors.dir/src/Temp/LM35.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/Temp/LM35.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\Temp\LM35.cpp > CMakeFiles\sensors.dir\src\Temp\LM35.cpp.i
+
+CMakeFiles/sensors.dir/src/Temp/LM35.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/Temp/LM35.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\Temp\LM35.cpp -o CMakeFiles\sensors.dir\src\Temp\LM35.cpp.s
+
+CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj.provides: CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj
+
+
 CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj: CMakeFiles/sensors.dir/flags.make
 CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
 CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj: ../src/Temp/TMP36.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj"
 	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\Temp\TMP36.cpp.obj -c D:\git\waterloop_projects\sensors\src\Temp\TMP36.cpp
 
 CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.i: cmake_force
@@ -134,7 +159,7 @@ CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj.provides.build: CMakeFiles/sensors
 CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj: CMakeFiles/sensors.dir/flags.make
 CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
 CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj: ../src/color/ColorSensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj"
 	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\color\ColorSensor.cpp.obj -c D:\git\waterloop_projects\sensors\src\color\ColorSensor.cpp
 
 CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.i: cmake_force
@@ -156,85 +181,135 @@ CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj.provides: CMakeFiles/sensor
 CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj
 
 
-CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj: CMakeFiles/sensors.dir/flags.make
-CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
-CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj: ../src/color/Color_Sensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\color\Color_Sensor.cpp.obj -c D:\git\waterloop_projects\sensors\src\color\Color_Sensor.cpp
+CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj: ../src/imu/Accel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\imu\Accel.cpp.obj -c D:\git\waterloop_projects\sensors\src\imu\Accel.cpp
 
-CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.i"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\color\Color_Sensor.cpp > CMakeFiles\sensors.dir\src\color\Color_Sensor.cpp.i
+CMakeFiles/sensors.dir/src/imu/Accel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/imu/Accel.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\imu\Accel.cpp > CMakeFiles\sensors.dir\src\imu\Accel.cpp.i
 
-CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.s"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\color\Color_Sensor.cpp -o CMakeFiles\sensors.dir\src\color\Color_Sensor.cpp.s
+CMakeFiles/sensors.dir/src/imu/Accel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/imu/Accel.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\imu\Accel.cpp -o CMakeFiles\sensors.dir\src\imu\Accel.cpp.s
 
-CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj.requires:
+CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj.requires:
 
-.PHONY : CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj.requires
+.PHONY : CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj.requires
 
-CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj.provides: CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj.provides.build
-.PHONY : CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj.provides
+CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj.provides: CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj.provides
 
-CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj
-
-
-CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj: CMakeFiles/sensors.dir/flags.make
-CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
-CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj: ../src/imu/IMU.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\imu\IMU.cpp.obj -c D:\git\waterloop_projects\sensors\src\imu\IMU.cpp
-
-CMakeFiles/sensors.dir/src/imu/IMU.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/imu/IMU.cpp.i"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\imu\IMU.cpp > CMakeFiles\sensors.dir\src\imu\IMU.cpp.i
-
-CMakeFiles/sensors.dir/src/imu/IMU.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/imu/IMU.cpp.s"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\imu\IMU.cpp -o CMakeFiles\sensors.dir\src\imu\IMU.cpp.s
-
-CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj.requires:
-
-.PHONY : CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj.requires
-
-CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj.provides: CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj.provides.build
-.PHONY : CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj.provides
-
-CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj
+CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj
 
 
-CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj: CMakeFiles/sensors.dir/flags.make
-CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
-CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj: ../src/imu/IMUPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\imu\IMUPool.cpp.obj -c D:\git\waterloop_projects\sensors\src\imu\IMUPool.cpp
+CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj: ../src/imu/Gyro.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\imu\Gyro.cpp.obj -c D:\git\waterloop_projects\sensors\src\imu\Gyro.cpp
 
-CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.i"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\imu\IMUPool.cpp > CMakeFiles\sensors.dir\src\imu\IMUPool.cpp.i
+CMakeFiles/sensors.dir/src/imu/Gyro.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/imu/Gyro.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\imu\Gyro.cpp > CMakeFiles\sensors.dir\src\imu\Gyro.cpp.i
 
-CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.s"
-	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\imu\IMUPool.cpp -o CMakeFiles\sensors.dir\src\imu\IMUPool.cpp.s
+CMakeFiles/sensors.dir/src/imu/Gyro.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/imu/Gyro.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\imu\Gyro.cpp -o CMakeFiles\sensors.dir\src\imu\Gyro.cpp.s
 
-CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj.requires:
+CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj.requires:
 
-.PHONY : CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj.requires
+.PHONY : CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj.requires
 
-CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj.provides: CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj.provides.build
-.PHONY : CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj.provides
+CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj.provides: CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj.provides
 
-CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj
+CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj
+
+
+CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj: ../src/imu/Mag.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\imu\Mag.cpp.obj -c D:\git\waterloop_projects\sensors\src\imu\Mag.cpp
+
+CMakeFiles/sensors.dir/src/imu/Mag.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/imu/Mag.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\imu\Mag.cpp > CMakeFiles\sensors.dir\src\imu\Mag.cpp.i
+
+CMakeFiles/sensors.dir/src/imu/Mag.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/imu/Mag.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\imu\Mag.cpp -o CMakeFiles\sensors.dir\src\imu\Mag.cpp.s
+
+CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj.provides: CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj
+
+
+CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj: ../src/imu/SparkfunIMU.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\imu\SparkfunIMU.cpp.obj -c D:\git\waterloop_projects\sensors\src\imu\SparkfunIMU.cpp
+
+CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\imu\SparkfunIMU.cpp > CMakeFiles\sensors.dir\src\imu\SparkfunIMU.cpp.i
+
+CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\imu\SparkfunIMU.cpp -o CMakeFiles\sensors.dir\src\imu\SparkfunIMU.cpp.s
+
+CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj.provides: CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj
+
+
+CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj: ../src/lev/DPRSensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\lev\DPRSensor.cpp.obj -c D:\git\waterloop_projects\sensors\src\lev\DPRSensor.cpp
+
+CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\lev\DPRSensor.cpp > CMakeFiles\sensors.dir\src\lev\DPRSensor.cpp.i
+
+CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\lev\DPRSensor.cpp -o CMakeFiles\sensors.dir\src\lev\DPRSensor.cpp.s
+
+CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj.provides: CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj
 
 
 CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj: CMakeFiles/sensors.dir/flags.make
 CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
 CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj: ../src/lev/Lev.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj"
 	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\lev\Lev.cpp.obj -c D:\git\waterloop_projects\sensors\src\lev\Lev.cpp
 
 CMakeFiles/sensors.dir/src/lev/Lev.cpp.i: cmake_force
@@ -256,10 +331,85 @@ CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj.provides: CMakeFiles/sensors.dir/src/
 CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj
 
 
+CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj: ../src/lev/LowPressure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\lev\LowPressure.cpp.obj -c D:\git\waterloop_projects\sensors\src\lev\LowPressure.cpp
+
+CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\lev\LowPressure.cpp > CMakeFiles\sensors.dir\src\lev\LowPressure.cpp.i
+
+CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\lev\LowPressure.cpp -o CMakeFiles\sensors.dir\src\lev\LowPressure.cpp.s
+
+CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj.provides: CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj
+
+
+CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj: ../src/lev/Photoelectric.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\lev\Photoelectric.cpp.obj -c D:\git\waterloop_projects\sensors\src\lev\Photoelectric.cpp
+
+CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\lev\Photoelectric.cpp > CMakeFiles\sensors.dir\src\lev\Photoelectric.cpp.i
+
+CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\lev\Photoelectric.cpp -o CMakeFiles\sensors.dir\src\lev\Photoelectric.cpp.s
+
+CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj.provides: CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj
+
+
+CMakeFiles/sensors.dir/src/main.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/main.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/main.cpp.obj: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/sensors.dir/src/main.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\main.cpp.obj -c D:\git\waterloop_projects\sensors\src\main.cpp
+
+CMakeFiles/sensors.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/main.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\main.cpp > CMakeFiles\sensors.dir\src\main.cpp.i
+
+CMakeFiles/sensors.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/main.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\main.cpp -o CMakeFiles\sensors.dir\src\main.cpp.s
+
+CMakeFiles/sensors.dir/src/main.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/main.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/main.cpp.obj.provides: CMakeFiles/sensors.dir/src/main.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/main.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/main.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/main.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/main.cpp.obj
+
+
 CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj: CMakeFiles/sensors.dir/flags.make
 CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
 CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj: ../src/shared/DataHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj"
 	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\shared\DataHandler.cpp.obj -c D:\git\waterloop_projects\sensors\src\shared\DataHandler.cpp
 
 CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.i: cmake_force
@@ -281,35 +431,101 @@ CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj.provides: CMakeFiles/senso
 CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj
 
 
+CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj: ../src/shared/Sensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\shared\Sensor.cpp.obj -c D:\git\waterloop_projects\sensors\src\shared\Sensor.cpp
+
+CMakeFiles/sensors.dir/src/shared/Sensor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/shared/Sensor.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\shared\Sensor.cpp > CMakeFiles\sensors.dir\src\shared\Sensor.cpp.i
+
+CMakeFiles/sensors.dir/src/shared/Sensor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/shared/Sensor.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\shared\Sensor.cpp -o CMakeFiles\sensors.dir\src\shared\Sensor.cpp.s
+
+CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj.provides: CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj
+
+
+CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj: CMakeFiles/sensors.dir/flags.make
+CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj: CMakeFiles/sensors.dir/includes_CXX.rsp
+CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj: ../src/shared/SensorPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sensors.dir\src\shared\SensorPool.cpp.obj -c D:\git\waterloop_projects\sensors\src\shared\SensorPool.cpp
+
+CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.i"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\git\waterloop_projects\sensors\src\shared\SensorPool.cpp > CMakeFiles\sensors.dir\src\shared\SensorPool.cpp.i
+
+CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.s"
+	C:\Users\Deep6\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\git\waterloop_projects\sensors\src\shared\SensorPool.cpp -o CMakeFiles\sensors.dir\src\shared\SensorPool.cpp.s
+
+CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj.requires:
+
+.PHONY : CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj.requires
+
+CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj.provides: CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\sensors.dir\build.make CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj.provides.build
+.PHONY : CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj.provides
+
+CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj.provides.build: CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj
+
+
 # Object files for target sensors
 sensors_OBJECTS = \
 "CMakeFiles/sensors.dir/src/DocMain.cpp.obj" \
 "CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.obj" \
+"CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj" \
 "CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj" \
 "CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj" \
-"CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj" \
-"CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj" \
-"CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj" \
+"CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj" \
+"CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj" \
+"CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj" \
+"CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj" \
+"CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj" \
 "CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj" \
-"CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj"
+"CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj" \
+"CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj" \
+"CMakeFiles/sensors.dir/src/main.cpp.obj" \
+"CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj" \
+"CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj" \
+"CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj"
 
 # External object files for target sensors
 sensors_EXTERNAL_OBJECTS =
 
 sensors.exe: CMakeFiles/sensors.dir/src/DocMain.cpp.obj
 sensors.exe: CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj
 sensors.exe: CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj
 sensors.exe: CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj
-sensors.exe: CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj
-sensors.exe: CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj
-sensors.exe: CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj
 sensors.exe: CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/main.cpp.obj
 sensors.exe: CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj
+sensors.exe: CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj
 sensors.exe: CMakeFiles/sensors.dir/build.make
 sensors.exe: CMakeFiles/sensors.dir/linklibs.rsp
 sensors.exe: CMakeFiles/sensors.dir/objects1.rsp
 sensors.exe: CMakeFiles/sensors.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable sensors.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\git\waterloop_projects\sensors\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable sensors.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\sensors.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -319,13 +535,21 @@ CMakeFiles/sensors.dir/build: sensors.exe
 
 CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/DocMain.cpp.obj.requires
 CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/Temp/IRTemp.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/Temp/LM35.cpp.obj.requires
 CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/Temp/TMP36.cpp.obj.requires
 CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/color/ColorSensor.cpp.obj.requires
-CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/color/Color_Sensor.cpp.obj.requires
-CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/imu/IMU.cpp.obj.requires
-CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/imu/IMUPool.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/imu/Accel.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/imu/Gyro.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/imu/Mag.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/imu/SparkfunIMU.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/lev/DPRSensor.cpp.obj.requires
 CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/lev/Lev.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/lev/LowPressure.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/lev/Photoelectric.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/main.cpp.obj.requires
 CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/shared/DataHandler.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/shared/Sensor.cpp.obj.requires
+CMakeFiles/sensors.dir/requires: CMakeFiles/sensors.dir/src/shared/SensorPool.cpp.obj.requires
 
 .PHONY : CMakeFiles/sensors.dir/requires
 

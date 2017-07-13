@@ -1,24 +1,23 @@
 #include "TMP36.h"
 
 
-TMP36::TMP36(const String name, const uint8_t io_pin) : name{name}, io_pin{io_pin}{}
+TMP36::TMP36(const String name, const uint8_t pin) : Sensor{name, 60, 1}, pin{pin}{}
 
-
-void TMP36::serialPrint() {
-    float *temp = new float[1];
-    temp[0] = getTemp();
-
-    Serial.println(handler.getJSONString(name, temp, 1));
-    delete [] temp;
+int TMP36::getRawTemp() {
+    return analogRead(pin);
 }
 
+float TMP36::read(){
+    //getting the voltage reading from the temperature sensor
+    int reading = getRawTemp();
 
-float TMP36::getTemp() const{
-    int8_t sensorInput = analogRead(io_pin);            //read the analog sensor and store it
-    float temp = (double)sensorInput / 1024;            //find percentage of input reading
-    temp = temp * 5;                                    //multiply by 5V to get voltage
-    temp = temp - 0.5;                                  //Subtract the offset
-    temp = temp * 100;                                  //Convert to degrees
+    // converting that reading to voltage
+    float voltage = reading * 5.0;
+    voltage /= MAX_ANALOG;
 
-    return temp;
+    float temperatureC = (voltage - 0.5) * 100 ;  //converting from 10 mv per degree wit 500 mV offset
+
+    add(temperatureC);
+
+    return temperatureC;
 }

@@ -51,4 +51,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(${PROJECT_NAME} ${SRC_LIST} src/lev/Photoelectric.cpp src/lev/Photoelectric.h src/lev/DPRSensor.cpp src/lev/DPRSensor.h src/lev/LowPressure.cpp src/lev/LowPressure.h src/shared/SensorPool.cpp src/shared/SensorPool.h src/Temp/LM35.cpp src/Temp/LM35.h)
+add_executable(${PROJECT_NAME} ${SRC_LIST})

@@ -5,7 +5,7 @@ src/imu/main.cpp
 .pioenvs
 .piolibdeps
 *.make
-main.cpp
+src/main.cpp
 
 
 # Created by https://www.gitignore.io/api/clion

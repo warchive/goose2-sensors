@@ -26,7 +26,7 @@ class Mag : public Sensor {
     LSM9DS1 &getInstance();
 
 public:
-    Mag(const String name, SparkfunIMU &imu);
+    Mag(const String name, const uint8_t freq, SparkfunIMU &imu);
 
     /*!
      * reads magnetometer and makes it ready for data collection

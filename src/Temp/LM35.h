@@ -19,12 +19,7 @@ class LM35 : public Sensor{
     int getRawTemp();
 
 public:
-    /*!
-     * Single constructor creates the temperature sensor
-     * @param name is the name of the sensor
-     * @param pin is the analog pin being used
-     */
-    LM35(const String &name, const uint8_t pin);
+    LM35(const String &name, const uint8_t freq, const uint8_t pin);
 
     /*!
      * Calculates temperature by reading voltage. The temperature is in degree

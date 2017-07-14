@@ -1,7 +1,7 @@
 #include "Photoelectric.h"
 
-Photoelectric::Photoelectric(const String name, const uint8_t pin)
-        : Sensor(name, 60, 1), pin{pin} {}
+Photoelectric::Photoelectric(const String name, const uint8_t freq, const uint8_t pin)
+        : Sensor(name, freq, 1), pin{pin} {}
 
 int Photoelectric::getRawDistance() {
     return analogRead(pin);

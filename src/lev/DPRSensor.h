@@ -17,12 +17,7 @@ class DPRSensor : public Sensor{
 
     int getRawDPR();
 public:
-    /*!
-     * Single constructor creates a DPR sensor at pin specified
-     * @param name is the name of the sensor to be displayed
-     * @param pin is the analog pin it is attached to
-     */
-    DPRSensor(const String name, const uint8_t pin);
+    DPRSensor(const String name, const uint8_t freq, const uint8_t pin);
 
     /*!
      * Reads sensor data from the analog pin and returns scaled values

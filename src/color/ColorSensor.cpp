@@ -1,8 +1,8 @@
 #include "ColorSensor.h"
 
-ColorSensor::ColorSensor(const String name, const uint8_t ou1Pin,
+ColorSensor::ColorSensor(const String name, const uint8_t freq, const uint8_t ou1Pin,
                          const uint8_t out2Pin, const uint8_t out3Pin)
-        : Sensor{name, 60, 1}, out1Pin{ou1Pin}, out2Pin{out2Pin}, out3Pin{out3Pin} {}
+        : Sensor{name, freq, 1}, out1Pin{ou1Pin}, out2Pin{out2Pin}, out3Pin{out3Pin} {}
 
 
 uint8_t ColorSensor::limit(const int value, const int bound) {

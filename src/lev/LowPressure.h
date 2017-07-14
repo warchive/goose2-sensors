@@ -23,7 +23,7 @@ class LowPressure : public Sensor{
     int getRawPressure();
 
 public:
-    LowPressure(const String name, const uint8_t pin);
+    LowPressure(const String name, const uint8_t freq, const uint8_t pin);
 
     // Returns the pressure in ???.
     // Linearly scaled from MIN_PRESSURE to MAX_PRESSURE;

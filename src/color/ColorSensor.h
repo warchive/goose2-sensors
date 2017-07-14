@@ -12,7 +12,7 @@ class ColorSensor : public Sensor{
     uint8_t limit(const int value, const int bound);
 
 public:
-    ColorSensor(const String name, const uint8_t ou1Pin,
+    ColorSensor(const String name, const uint8_t freq, const uint8_t ou1Pin,
                 const uint8_t out2Pin, const uint8_t out3Pin);
     uint8_t getOut1();
     uint8_t getOut2();

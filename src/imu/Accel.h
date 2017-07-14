@@ -23,7 +23,7 @@ class Accel : Sensor{
     LSM9DS1 &getInstance();
 
 public:
-    Accel(const String name, SparkfunIMU &imu);
+    Accel(const String name, const uint8_t freq, SparkfunIMU &imu);
 
     /*!
      * reads accelerometer and makes it ready for data collection

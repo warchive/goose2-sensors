@@ -1,7 +1,7 @@
 #include "LowPressure.h"
 
-LowPressure::LowPressure(const String name, const uint8_t pin)
-        : Sensor{name, 20, 1}, pin{pin}{}
+LowPressure::LowPressure(const String name, const uint8_t freq, const uint8_t pin)
+        : Sensor{name, freq, 1}, pin{pin}{}
 
 int LowPressure::getRawPressure() {
     return analogRead(pin);

@@ -1,6 +1,7 @@
 #include "Mag.h"
 
-Mag::Mag(const String name, SparkfunIMU &imu) : Sensor{name, 60, 5}, imu{imu} {}
+Mag::Mag(const String name, const uint8_t freq, SparkfunIMU &imu)
+        : Sensor{name, freq, 5}, imu{imu} {}
 
 float Mag::read() {
     if (!rateCheck()) return 0;

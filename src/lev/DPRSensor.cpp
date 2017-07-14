@@ -1,7 +1,7 @@
 #include "DPRSensor.h"
 
-DPRSensor::DPRSensor(const String name, const uint8_t pin)
-        : Sensor{name, 60, 1}, pin{pin}{}
+DPRSensor::DPRSensor(const String name, const uint8_t freq, const uint8_t pin)
+        : Sensor{name, freq, 1}, pin{pin}{}
 
 int DPRSensor::getRawDPR() {
     return analogRead(pin);

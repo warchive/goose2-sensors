@@ -13,7 +13,7 @@
 
 class SRAM : public Sensor{
 public:
-    SRAM(const String name);
+    SRAM(const String name, const uint8_t freq);
 
     /*!
      * Calculates free SRAM and stores it to be printed later on

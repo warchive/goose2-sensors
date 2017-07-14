@@ -1,6 +1,7 @@
 #include "Gyro.h"
 
-Gyro::Gyro(const String name, SparkfunIMU &imu) : Sensor{name, 60, 4, true}, imu{imu} {}
+Gyro::Gyro(const String name, const uint8_t freq, SparkfunIMU &imu)
+        : Sensor{name, 60, 4, true}, imu{imu} {}
 
 float Gyro::read() {
     if (!rateCheck()) return 0;

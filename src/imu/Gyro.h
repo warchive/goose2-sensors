@@ -25,7 +25,7 @@ class Gyro : public Sensor {
     LSM9DS1 &getInstance();
 
 public:
-    Gyro(const String name, SparkfunIMU &imu);
+    Gyro(const String name, const uint8_t freq, SparkfunIMU &imu);
 
     /*!
      * reads Gyroscope and makes it ready for data collection

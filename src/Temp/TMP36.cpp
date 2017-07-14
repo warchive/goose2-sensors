@@ -1,7 +1,8 @@
 #include "TMP36.h"
 
 
-TMP36::TMP36(const String name, const uint8_t pin) : Sensor{name, 60, 1}, pin{pin}{}
+TMP36::TMP36(const String name, const uint8_t freq, const uint8_t pin)
+        : Sensor{name, freq, 1}, pin{pin}{}
 
 int TMP36::getRawTemp() {
     return analogRead(pin);

@@ -1,6 +1,7 @@
 #include "Accel.h"
 
-Accel::Accel(const String name, SparkfunIMU &imu) : Sensor(name, 60, 6), imu{imu} {}
+Accel::Accel(const String name, const uint8_t freq, SparkfunIMU &imu)
+        : Sensor(name, freq, 6), imu{imu} {}
 
 float Accel::read() {
     if (!rateCheck()) return 0;

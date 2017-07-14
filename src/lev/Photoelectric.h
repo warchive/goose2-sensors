@@ -22,7 +22,7 @@ private:
     // (0V-5V. 0-1023)
     int getRawDistance();
 public:
-    Photoelectric(const String name, const uint8_t pin);
+    Photoelectric(const String name, const uint8_t freq, const uint8_t pin);
 
     // Returns the distance in millimeters.
     // Linearly scaled from MIN_DISTANCE to MAX_DISTANCE

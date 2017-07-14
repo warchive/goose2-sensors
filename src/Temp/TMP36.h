@@ -19,12 +19,7 @@ class TMP36 : public Sensor{
     int getRawTemp();
 
 public:
-    /*!
-     * Single constructor initializes the sensor and setups an analog connection
-     * @param name is the name of the sensor
-     * @param pin is the pin this sensor is attached too
-     */
-    TMP36(const String name, const uint8_t pin);
+    TMP36(const String name, const uint8_t freq, const uint8_t pin);
 
     /*!
      * Calculates temperature by reading voltage. The temperature is in degree

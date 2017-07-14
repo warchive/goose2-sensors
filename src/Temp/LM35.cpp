@@ -1,6 +1,7 @@
 #include "LM35.h"
 
-LM35::LM35(const String &name, const uint8_t pin) : Sensor{name, 60, 1}, pin{pin}{}
+LM35::LM35(const String &name, const uint8_t freq, const uint8_t pin)
+        : Sensor{name, freq, 1}, pin{pin}{}
 
 int LM35::getRawTemp() {
     return analogRead(pin);

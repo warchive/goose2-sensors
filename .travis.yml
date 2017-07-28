@@ -54,11 +54,11 @@
          - "~/.platformio"
 
  env:
-     - PLATFORMIO_CI_SRC=examples/imuUsage.cc
-     - PLATFORMIO_CI_SRC=examples/sensorUsage.cc
+     - PLATFORMIO_CI_SRC=examples/imuUsage.ino
+     - PLATFORMIO_CI_SRC=examples/sensorUsage.ino
 
  install:
      - pip install -U platformio
 
  script:
-     - platformio ci --lib="lib/" --board=uno --board=megaatmega2560
+     - platformio ci --lib="." --lib="lib/*" --board=uno --board=megaatmega2560

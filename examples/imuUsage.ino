@@ -5,6 +5,7 @@
  * @brief This file shows an example of how to use IMU sensor in this library
  */
 
+#include <SensorPool.h>
 #include <imu/SparkfunIMU.h>
 #include <imu/Accel.h>
 #include <imu/Gyro.h>

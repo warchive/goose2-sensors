@@ -8,7 +8,7 @@
 #define SRC_IMUDATA_H_
 
 #include <StandardCplusplus.h>
-#include <ArduinoJson.h>
+#include "../ArduinoJson/ArduinoJson.h"
 #include <WString.h>
 #include <utility.h>
 

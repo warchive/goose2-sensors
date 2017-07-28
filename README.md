@@ -5,8 +5,6 @@
 - [About](#about)
 - [How to Contribute](#how-to-contribute)
 - [How to Code using platformIo](#how-to-code-using-platformio)
-- [Communication Pipeline](#communication-pipeline)
-
 ---
 
 ## About

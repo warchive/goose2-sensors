@@ -1,16 +1,20 @@
+/*!
+ * @author Deep Dhillon
+ * @date July 11, 2017
+ * @brief A Base class for all the sensors to make it easier to add more sensors
+ */
+
 #ifndef CONTROL_SENSOR_H
 #define CONTROL_SENSOR_H
 
 #include <WSerial.h>
-#include "DataHandler.h"
-#include <Arduino.h>
+#include <WSerial.h>
 
 class Sensor{
-    DataHandler dh;
-
     String name;
     const int rate;
     int numInputs;
+
     const bool heartBeat;
     int check;
     int printCounter;
@@ -29,8 +33,8 @@ protected:
 public:
 
     /*!
-     * Single constructor creates a sensor object
-     * @param name is the name of the sensor
+     * Single constructor creates a Sensor
+     * @param name name of the sensor
      * @param rate rate at which this sensor will function
      * @param numInputs is the number of sensor values
      */
@@ -43,13 +47,13 @@ public:
 
     /*!
      * Reads data from the sensor
-     * @return the data recieved from the sensor
+     * @return the data received from the sensor
      */
     virtual float read() = 0;
 
     /*!
-     * Checks if the sensor read and print rate is bring followed
-     * @return true or false based on if reading and writing is allowed
+     * Checks if the sensor read and print rate is being followed
+     * @return true or false
      */
     bool rateCheck();
 
@@ -73,15 +77,19 @@ public:
      */
     float get(const int index);
 
+    /*!
+     * Tells the name of the sensor
+     * @return the name of the sensor
+     */
     String &getName();
 
+	/*!
+	 * Gives acces to the functioning rate of the sensor
+	 * @return the rate
+	 */
     const int getRate();
 
-    const int getNumInputs();
-
-    void setNumInputs(const int numInputs);
-
-    friend WSerial &operator <<(WSerial &serial, Sensor &sensor);
+    friend wlp::WSerial &operator <<(wlp::WSerial &serial, Sensor &sensor);
 };
 
 /*!
@@ -90,6 +98,6 @@ public:
  * @param sensor is the sensor being used
  * @return the serial
  */
-WSerial &operator <<(WSerial &serial, Sensor &sensor);
+wlp::WSerial &operator <<(wlp::WSerial &serial, Sensor &sensor);
 
 #endif //CONTROL_SENSOR_H

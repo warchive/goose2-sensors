@@ -9,15 +9,20 @@
 #define SENSORS_SRAM_H
 
 
-#include <shared/Sensor.h>
+#include <Sensor.h>
 
 class SRAM : public Sensor{
 public:
+    /*!
+     * Single constructor creates Memory sensor
+     * @param name name of the sensor
+     * @param freq frequency of output
+     */
     SRAM(const String name, const uint8_t freq);
 
     /*!
      * Calculates free SRAM and stores it to be printed later on
-     * @return
+     * @return the current memory available
      */
     float read();
 };

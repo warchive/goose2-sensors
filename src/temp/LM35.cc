@@ -1,3 +1,4 @@
+#include <USBAPI.h>
 #include "LM35.h"
 
 LM35::LM35(const String &name, const uint8_t freq, const uint8_t pin)

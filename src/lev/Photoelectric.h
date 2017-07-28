@@ -1,16 +1,14 @@
-/*
- * Photoelectric.h
- *
- *  Created on: June 17, 2017
- *  Author: Christopher
- *  Description: Photoelectric Sensor used of Levitation
+/*!
+ * @name Christopher
+ * @date June 17, 2017
+ * @brief Photoelectric sensor measures the distance for Lev System
  */
 
 #ifndef SENSORS_PHOTOELECTRIC_H
 #define SENSORS_PHOTOELECTRIC_H
 
 
-#include <shared/Sensor.h>
+#include <Sensor.h>
 
 class Photoelectric : public Sensor{
 private:
@@ -18,14 +16,24 @@ private:
     const float MIN_DISTANCE = 20; //millimeters
     const float MAX_DISTANCE = 80;
 
-    // Gets the distance voltage as measured by the photoelectric distance sensor
-    // (0V-5V. 0-1023)
+    /*!
+	 * Givess access to the raw voltage reading
+	 * @return a number from 0 to 1024
+	 */
     int getRawDistance();
 public:
+    /*!
+     * Single constructor creates Photoelectric sensor
+     * @param name name of the sensor
+     * @param freq frequency of output
+     * @param pin pin to read data from
+     */
     Photoelectric(const String name, const uint8_t freq, const uint8_t pin);
-
-    // Returns the distance in millimeters.
-    // Linearly scaled from MIN_DISTANCE to MAX_DISTANCE
+    
+    /*!
+     * Reads sensor data from the analog pin and returns scaled values
+     * @return the scaled value (distance in millimeters)
+     */
     float read();
 };
 

@@ -1,4 +1,8 @@
+#include <USBAPI.h>
+#include <JsonHandler.h>
 #include "Sensor.h"
+
+using namespace wlp;
 
 Sensor::Sensor(const String name, const int rate, const int numInputs, const bool heartBeat)
         : name{name}, rate{rate}, numInputs{numInputs}, heartBeat{heartBeat}{
@@ -14,7 +18,6 @@ Sensor::~Sensor() {
     delete [] array;
 }
 
-
 bool Sensor::rateCheck() {
     if (millis() - prevTime >= 1000){
         printCounter = 0;
@@ -29,12 +32,11 @@ bool Sensor::rateCheck() {
     return false;
 }
 
-
 String &Sensor::getJSON(const int check) {
     if (check < 0)
-        JSONString = dh.getJSONString(name, array, numInputs);
+        JSONString = wlp::json.encodeSensor(name, array, numInputs);
     else
-        JSONString = dh.getJSONString(name, array, numInputs, check);
+        JSONString = wlp::json.encodeSensor(name, array, numInputs, check);
 
     return JSONString;
 }
@@ -54,29 +56,11 @@ float Sensor::get(const int index){
     return array[index];
 }
 
-String &Sensor::getName() {
-    return name;
-}
+String &Sensor::getName() { return name; }
 
-const int Sensor::getRate() {
-    return rate;
-}
+const int Sensor::getRate() { return rate; }
 
-const int Sensor::getNumInputs() {
-    return numInputs;
-}
-
-void Sensor::setNumInputs(const int numInputs) {
-    if (numInputs >= 0){
-        this->numInputs = numInputs;
-        delete [] array;
-        array = new float[numInputs];
-    }
-}
-
-void Sensor::setCheck(const int check) {
-    this->check = check;
-}
+void Sensor::setCheck(const int check) { this->check = check; }
 
 WSerial &operator <<(WSerial &serial, Sensor &sensor){
     if (!sensor.rateCheck()) return serial;

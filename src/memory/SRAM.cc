@@ -5,5 +5,5 @@ SRAM::SRAM(const String name, const uint8_t freq) : Sensor{name, freq, 1} {}
 
 float SRAM::read() {
     add(freeMemory());
-    return 0;
+    return get(0);
 }

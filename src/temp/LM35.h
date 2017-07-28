@@ -7,7 +7,7 @@
 #define SENSORS_LM35_H
 
 
-#include <shared/Sensor.h>
+#include <Sensor.h>
 
 class LM35 : public Sensor{
     const uint8_t pin;
@@ -19,11 +19,16 @@ class LM35 : public Sensor{
     int getRawTemp();
 
 public:
+    /*!
+     * Single constructor creates creates LM35 contact temperature sensor
+     * @param name sensor name
+     * @param freq frequency of the output
+     * @param pin pin for data gathering
+     */
     LM35(const String &name, const uint8_t freq, const uint8_t pin);
 
     /*!
-     * Calculates temperature by reading voltage. The temperature is in degree
-     * Celsius
+     * Calculates temperature by reading voltage
      * @return the temperature in degree Celsius
      */
     float read();

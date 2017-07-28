@@ -1,3 +1,4 @@
+#include <USBAPI.h>
 #include "ColorSensor.h"
 
 ColorSensor::ColorSensor(const String name, const uint8_t freq, const uint8_t ou1Pin,

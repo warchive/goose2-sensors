@@ -1,3 +1,4 @@
+#include <USBAPI.h>
 #include "DPRSensor.h"
 
 DPRSensor::DPRSensor(const String name, const uint8_t freq, const uint8_t pin)

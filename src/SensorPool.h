@@ -11,6 +11,7 @@
 #include <StandardCplusplus.h>
 #include <vector>
 #include "Sensor.h"
+#include <WSerial.h>
 
 class SensorPool {
     std::vector<Sensor*> sensors;
@@ -22,8 +23,8 @@ public:
     void read();
 
     /*!
-     * Allows for a sensors to be added to the pool
-     * @param s is the sensor being added
+     * Allows for a sensor to be added to the pool
+     * @param t is the sensor being added
      */
     void add(Sensor *s);
 
@@ -35,20 +36,33 @@ public:
     Sensor &operator[](const uint8_t index);
 
     /*!
+     * Gives access to the actual read object rather than Sensor object
+     * @tparam T type of Object user wants
+     * @param index index of the sensor
+     * @return the element
+     */
+    template <typename T>
+    T &getSensor(int index){
+        Sensor *sensor = sensors[index];
+
+        return *static_cast<T*>(sensor);
+    }
+
+    /*!
      * Destroys the pool and frees up the memory
      */
     void destroy();
 
-    friend WSerial &operator <<(WSerial &serial, SensorPool &pool);
+    friend wlp::WSerial &operator <<(wlp::WSerial &serial, SensorPool &pool);
 };
 
 /*!
- * Prints all the sensors to the serial
+ * Prints all the sensors/ sensor pools to the serial
  * @param serial is the serial being used
  * @param pool is the pool being used
  * @return the serial
  */
-WSerial &operator <<(WSerial &serial, SensorPool &pool);
+wlp::WSerial &operator <<(wlp::WSerial &serial, SensorPool &pool);
 
 
 #endif //SENSORS_SENSORPOOL_H

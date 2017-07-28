@@ -1,11 +1,7 @@
 .pioenvs
 .piolibdeps
 CMakeListsPrivate.txt
-src/imu/main.cpp
-.pioenvs
-.piolibdeps
 *.make
-src/main.cpp
 
 
 # Created by https://www.gitignore.io/api/clion
@@ -73,5 +69,3 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/clion
-.pioenvs
-.piolibdeps

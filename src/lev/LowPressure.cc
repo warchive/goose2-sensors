@@ -1,3 +1,4 @@
+#include <USBAPI.h>
 #include "LowPressure.h"
 
 LowPressure::LowPressure(const String name, const uint8_t freq, const uint8_t pin)

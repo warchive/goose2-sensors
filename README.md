@@ -8,9 +8,8 @@
 ---
 
 ## About
+This repository contains code for all the sensors on the pod. Anyone working on sensors, work in this repository.
 
-This repository contains code for all the sensors on the Waterloop current pod.
-Anyone working on sensors and scripts related to sensor data, work in this repository.
 ---
 
 ## How to Contribute

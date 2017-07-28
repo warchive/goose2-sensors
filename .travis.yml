@@ -61,4 +61,4 @@
      - pip install -U platformio
 
  script:
-     - platformio ci --lib="." --uno --megaatmega2560
+     - platformio ci --lib="." --board=uno --board=megaatmega2560
